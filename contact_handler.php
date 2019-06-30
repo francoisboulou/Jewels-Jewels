@@ -32,7 +32,7 @@ if($_POST) {
 
 
     if(mail($recepient, $email_title, $visitor_message, $headers)) {
-        echo "<p>Thank you for contacting us, $visitor_name. You will get a reply within 24 hours.</p>";
+        header('Location: thank_you.php');
     } else {
         echo '<p>We are sorry but the email did not go through.</p>';
     }

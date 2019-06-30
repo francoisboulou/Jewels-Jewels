@@ -154,6 +154,21 @@ $(document).ready(function()
 		}
 	}
 
+// Instafeed
+
+	var userFeed = new Instafeed({
+        get: 'user',
+        userId: '2118266624',
+        limit: 12,
+        resolution: 'standard_resolution',
+        accessToken: '2118266624.1677ed0.6aa196e838ce4158a7d4835929255488',
+        sortBy: 'most-recent',
+        template: '<div class="col-lg-3 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
+    });
+
+
+    userFeed.run();
+
 	initMenu();
 	initTestSlider();
 

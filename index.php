@@ -20,14 +20,14 @@
 		<nav class="main_nav">
 			<ul>
 				<li><a href="#">home</a></li>
-				<li><a href="about.html">about</a></li>
+				<li><a href="about.php">about</a></li>
 			</ul>
 		</nav>
-		<a id="nav_logo_img" href="index.html"></a>
+		<a id="nav_logo_img" href="index.php"></a>
 		<nav class="main_nav">
 			<ul>
 				<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items" target="_blank">store</a></li>
-				<li><a href="contact.html">contact</a></li>
+				<li><a href="contact.php">contact</a></li>
 			</ul>
 		</nav>
 		<div id="burger_container" class="menu_mm"><div></div><div></div><div></div></div>
@@ -42,9 +42,9 @@
 			<nav id="menu_nav">
 				<ul>
 					<li><a href="#">home</a></li>
-					<li><a href="about.html">about</a></li>
+					<li><a href="about.php">about</a></li>
 					<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items">store</a></li>
-					<li><a href="contact.html">contact</a></li>
+					<li><a href="contact.php">contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -130,14 +130,14 @@
 							<p id="extra_1_price">20%<span> off</span></p>
 							<p id="extra_1_title">All Diamond Jewelry</p>
 							<p id="extra_1_text">Limited time offer. Offer may not be combined with any other sale, promotion, discount, code, or coupon.</p>
-							<a class="button" href="checkout.html">shop now</a>
+							<a class="button" href="checkout.php">shop now</a>
 						</div>
 					</section>
 
 					<section class="extra_promo" id="extra_promo_2">
 						<div class="extra_content" id="extra_2">
 							<div id="extra_2_text">Native<br>American<br>Collection</div>
-							<a class="button" href="checkout.html">shop now</a>
+							<a class="button" href="checkout.php">shop now</a>
 						</div>
 					</section>
 				</section>
@@ -184,9 +184,13 @@
 					</div>
 				</section>
 
+
+
 			</div>
 		</article>
 	</main>
+
+	
 
 	<!-- Footer -->
 
@@ -210,5 +214,6 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="js/custom.js"></script>
+<script type="text/javascript" src="./js/instafeed.min.js"></script>
 </body>
 </html>

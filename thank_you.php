@@ -13,15 +13,15 @@
 	<header id="header">
 		<nav class="main_nav">
 			<ul>
-				<li><a href="index.html">home</a></li>
-				<li><a href="about.html">about</a></li>
+				<li><a href="index.php">home</a></li>
+				<li><a href="about.php">about</a></li>
 			</ul>
 		</nav>
-		<a id="nav_logo_img" href="index.html"></a>
+		<a id="nav_logo_img" href="index.php"></a>
 		<nav class="main_nav">
 			<ul>
 				<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items" target="_blank">store</a></li>
-				<li><a href="contact.html">contact</a></li>
+				<li><a href="contact.php">contact</a></li>
 			</ul>
 		</nav>
 		<div id="burger_container" class="menu_mm"><div></div><div></div><div></div></div>
@@ -35,10 +35,10 @@
 			<h1 id="burger_logo" class="menu_mm"><img id="burger_logo_img" src='images/logo.jpg'></h1>
 			<nav id="menu_nav">
 				<ul>
-					<li><a href="index.html">home</a></li>
-					<li><a href="about.html">about</a></li>
+					<li><a href="index.php">home</a></li>
+					<li><a href="about.php">about</a></li>
 					<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items">store</a></li>
-					<li><a href="contact.html">contact</a></li>
+					<li><a href="contact.php">contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -51,10 +51,10 @@
     </section>
 
 	<footer>
-		<a href="index.html">Ruby's Vintage Jewelry</a>
+		<a href="index.php">Ruby's Vintage Jewelry</a>
 		<nav>
 			<ul>
-				<li><a href="index.html">home</a></li>
+				<li><a href="index.php">home</a></li>
 				<li><a href="about.php">about</a></li>
 				<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items">store</a></li>
 				<li><a href="contact.php">contact</a></li>
