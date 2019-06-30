@@ -1,0 +1,143 @@
+
+/* Header */
+
+#header
+{
+	position: fixed;
+	height: @header_height;
+	.w100();
+	background: rgba(255,255,255,.5);
+	z-index: 100;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+
+	@media only screen and (max-width: 991px)
+	{
+		justify-content: center;
+		background: rgba(255,255,255,0);
+
+	}
+
+	@media only screen and (max-width: 766px)
+	{
+	}
+
+	@media only screen and (max-width: 400px)
+	{
+		background: rgba(255,255,255,1);
+		height: @header_height_small;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+
+#header.scrolled
+{
+	height: 120px;
+
+	@media only screen and (max-width: 766px)
+	{
+		height: 110px;
+	}
+}
+
+
+/* Nav and Logo */
+
+#nav_logo_img
+{
+	background-image: url("../../images/logo.svg");
+	// .test(red);
+	background-size: 90% 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: @logo_width;
+	height: @logo_height;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+
+	@media only screen and (max-width: 575px)
+	{
+		width: @logo_width_small;
+		height: @logo_height_small;
+	}
+
+	@media only screen and (max-width: 766px)
+	{
+
+	}
+
+	@media only screen and (max-width: 400px)
+	{
+		width: 100%;
+		height: @logo_height_small/1.25;
+		margin-top: 5%;
+	}
+}
+
+
+#nav_logo_img.logo-scrolled
+{
+	height: 100px;
+
+	@media only screen and (max-width: 400px)
+	{
+		height: 90px;
+	}
+}
+
+.main_nav
+{
+  width: calc((85%/2) - (@logo_width/2));
+	// align-self: flex-end;
+	// .test(blue);
+
+
+
+	@media only screen and (max-width: 991px)
+	{
+		display: none;
+	}
+}
+
+
+.main_nav ul
+{
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.main_nav ul li a
+{
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	color: black;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+
+.main_nav ul li a:hover
+{
+	color: black;
+}
