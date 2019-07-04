@@ -15,6 +15,7 @@
 
 ******************************/
 
+
 $(document).ready(function()
 {
 	"use strict";
@@ -29,7 +30,7 @@ $(document).ready(function()
 	let menuActive = false;
 	let menu = document.getElementById('menu');
 	let burger = document.getElementById('burger_container');
-	let logo = document.getElementById('nav_logo_img');
+
 
 
 	/*
@@ -41,31 +42,25 @@ $(document).ready(function()
 
 		if ((document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) && ($(window).width() < 991)) {
 			header.classList.add("scrolled");
-			logo.classList.add("logo-scrolled");
 			header.style.backgroundColor = 'rgba(255,255,255,.8)';
 		}
 		else if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
 		{
 			header.classList.add("scrolled");
-			logo.classList.add("logo-scrolled");
+
 		}
 		else if ((document.body.scrollTop < 100 || document.documentElement.scrollTop < 100) && ($(window).width() < 991))
 		{
 			header.classList.remove("scrolled");
-			logo.classList.remove("logo-scrolled");
+
 			header.style.backgroundColor = 'rgba(255,255,255,0)';
 		}
 		else if ((document.body.scrollTop < 100 || document.documentElement.scrollTop < 100) && ($(window).width() > 991))
 		{
 			header.classList.remove("scrolled");
-			logo.classList.remove("logo-scrolled");
+
 			header.style.backgroundColor = 'rgba(255,255,255,.5)';
 		}
-		// else
-		// {
-		// 	header.classList.remove("scrolled");
-		// 	logo.classList.remove("logo-scrolled");
-		// }
 	}
 
 	setHeader();
@@ -158,17 +153,121 @@ $(document).ready(function()
 
 	var userFeed = new Instafeed({
         get: 'user',
-        userId: '2118266624',
+        userId: '15533227278',
         limit: 12,
         resolution: 'standard_resolution',
-        accessToken: '2118266624.1677ed0.6aa196e838ce4158a7d4835929255488',
+        accessToken: '15533227278.1677ed0.d4fe0f36ca7c48b8ad1e753f197976f4',
         sortBy: 'most-recent',
         template: '<div class="col-lg-3 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
-    });
+	});
+	
+
+//NiCe ScRoLl//	
+
+	const homeRect = document.getElementById('home_container').getBoundingClientRect();
+	const homeTop = homeRect.top;
+	const homeBot = homeRect.bottom;
+
+	const collRect = document.getElementById('collections').getBoundingClientRect();
+	const collTop = collRect.top;
+	const collBot = collRect.bottom;
+
+	const arrivRect = document.getElementById('arrivals').getBoundingClientRect();
+	const arrivTop = arrivRect.top;
+	const arrivBot = arrivRect.bottom;
+
+	const extRect = document.getElementById('extra').getBoundingClientRect();
+	const extTop = extRect.top;
+	const extBot = extRect.bottom;
+
+
+
+
+	
+	const throttle = (func, limit) => {
+		let inThrottle
+		return function() {
+		  const args = arguments
+		  const context = this
+		  if (!inThrottle) {
+			func.apply(context, args)
+			inThrottle = true
+			setTimeout(() => inThrottle = false, limit)
+		  }
+		}
+	  }
+
+	// window.addEventListener('scroll', );
+
+
+	// Initial state
+	var scrollPos = 0;
+	// adding scroll event
+	// window.addEventListener('scroll', throttle(function() {
+	// 	if ((document.body.getBoundingClientRect()).top > scrollPos) {
+	// 		if (pageYOffset > extTop) {
+	// 			// window.scrollTo(0,extTop)
+	// 			window.scrollTo({
+	// 				top: extTop,
+	// 				left: 0,
+	// 				behavior: 'smooth',
+	// 			  })
+	// 		} else if (pageYOffset > arrivTop) {
+	// 			// window.scrollTo(0,arrivTop)
+	// 			window.scrollTo({
+	// 				top: arrivTop,
+	// 				left: 0,
+	// 				behavior: 'smooth',
+	// 			  })
+	// 		} else if (pageYOffset > collTop) {
+	// 			window.scrollTo({
+	// 				top: collTop,
+	// 				left: 0,
+	// 				behavior: 'smooth',
+	// 			  })
+	// 			// window.scrollTo(0,collTop)
+	// 		} else if (pageYOffset > homeTop) {
+	// 			window.scrollTo({
+	// 				top: homeTop,
+	// 				left: 0,
+	// 				behavior: 'smooth',
+	// 			  })
+	// 			// window.scrollTo(0,homeTop)
+	// 		}
+	// 	} else {
+	// 		// if (pageYOffset < homeTop) {
+	// 		// 	window.scrollTo(0,homeTop)
+	// 		// }
+	// 		if (pageYOffset < collTop) {
+	// 			// window.scrollTo(0,collTop)
+	// 			window.scrollTo({
+	// 				top: collTop,
+	// 				left: 0,
+	// 				behavior: 'smooth',
+	// 			  })
+	// 		} else if (pageYOffset < arrivTop) {
+	// 			// window.scrollTo(0,arrivTop)
+	// 			window.scrollTo({
+	// 				top: arrivTop,
+	// 				left: 0,
+	// 				behavior: 'smooth',
+	// 			  })
+	// 		} else if (pageYOffset < extTop) {
+	// 			// window.scrollTo(0,extTop)
+	// 			window.scrollTo({
+	// 				top: extTop,
+	// 				left: 0,
+	// 				behavior: 'smooth',
+	// 			  })
+	// 		}
+	// 	}		// saves the new position for iteration.
+	// 	scrollPos = (document.body.getBoundingClientRect()).top;
+	// 	}, 1000))
+	// detects new state and compares it with the new one
+	
 
 
     userFeed.run();
-
 	initMenu();
 	initTestSlider();
 

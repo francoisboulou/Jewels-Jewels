@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Ruby's Vintage Jewelry</title>
-<meta charset="utf-8">
+<title>Ruby's Vintage - Unique Vintage Jewelry</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Ruby's Vintage Jewelry - Unique Vintage Jewelry Items">
+<meta name="description" content="Ruby's Vintage Jewelry - Unique Vintage Jewelry Items. Shop our inventory of thousands of beautiful, one of a kind pieces in styles ranging from Art Deco, to Native American Artesanal. Find an engagement ring, commemorate a special occasion, or find your next favorite accesory.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
@@ -17,15 +17,11 @@
 	<!-- Header -->
 
 	<header id="header">
+		<a id="nav_logo_img" href="index.php"></a>
 		<nav class="main_nav">
 			<ul>
 				<li><a href="#">home</a></li>
 				<li><a href="about.php">about</a></li>
-			</ul>
-		</nav>
-		<a id="nav_logo_img" href="index.php"></a>
-		<nav class="main_nav">
-			<ul>
 				<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items" target="_blank">store</a></li>
 				<li><a href="contact.php">contact</a></li>
 			</ul>
@@ -68,24 +64,12 @@
 
 				<section id="collections">
 					<h1 class="section_title">Our Collections</h1>
-
 					<!-- Collections Item -->
-					<div class="collections_item">
-						<div class="collections_image" id="collections_image_1"></div>
-						<a class="button collections_button" href="https://www.etsy.com/shop/rubysvintagejewelry?ref=simple-shop-header-name&listing_id=545886983&section_id=15959220">Engagement Rings</a>
-					</div>
-
-						<!-- Collection Item -->
-					<div class="collections_item" id="collections_item_2">
-						<div class="collections_image" id="collections_image_2"></div>
-						<a class="button collections_button" href="https://www.etsy.com/shop/rubysvintagejewelry?ref=simple-shop-header-name&listing_id=545886983&section_id=15959222">Men's Collection</a>
-					</div>
-
+					<a class="collections_image" id="collections_image_1" href="https://www.etsy.com/shop/rubysvintagejewelry?ref=simple-shop-header-name&listing_id=545886983&section_id=15959220">Engagement Rings</a>
 					<!-- Collection Item -->
-					<div class="collections_item">
-						<div class="collections_image" id="collections_image_3"></div>
-						<a class="button collections_button" href="https://www.etsy.com/shop/rubysvintagejewelry?ref=simple-shop-header-name&listing_id=545886983&section_id=16036813">Unique Vintage</a>
-					</div>
+					<a class="collections_image" id="collections_image_2" href="https://www.etsy.com/shop/rubysvintagejewelry?ref=simple-shop-header-name&listing_id=545886983&section_id=15959222">Men's Collection</a>
+					<!-- Collection Item -->
+					<a class="collections_image" id="collections_image_3" href="https://www.etsy.com/shop/rubysvintagejewelry?ref=simple-shop-header-name&listing_id=545886983&section_id=16036813">Unique Vintage</a>
 				</section>
 
 
@@ -183,9 +167,9 @@
 						<p class="newsletter_text">One time offer. Offer may not be combined with any other sale, promotion, discount, code, or coupon.</p>
 					</div>
 				</section>
-
-
-
+				<section>
+					<div id='instafeed'></div>
+				</section>
 			</div>
 		</article>
 	</main>
@@ -209,6 +193,7 @@
 			<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 		</ul>
 		<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by Francois Boulou</p>
+		<!-- https://www.pexels.com/photo/woman-wears-gold-colored-blue-gemstone-pendant-necklace-1035683/ -->
 	</footer>
 
 <script src="js/jquery-3.2.1.min.js"></script>

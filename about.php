@@ -14,15 +14,11 @@
 	<!-- Header -->
 
 	<header id="header">
-		<nav class="main_nav">
-			<ul>
-				<li><a href="index.php">home</a></li>
-				<li><a href="#">about</a></li>
-			</ul>
-		</nav>
 		<a id="nav_logo_img" href="index.php"></a>
 		<nav class="main_nav">
 			<ul>
+				<li><a href="#">home</a></li>
+				<li><a href="about.php">about</a></li>
 				<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items" target="_blank">store</a></li>
 				<li><a href="contact.php">contact</a></li>
 			</ul>
