@@ -1,0 +1,152 @@
+/*********************************
+7. New Arrivals
+*********************************/
+
+#arrivals
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+
+	@media only screen and (max-width: 400px)
+	{
+		margin: 15% 0;
+	}
+}
+.product
+{
+	.w(30%);
+	.flex(@dir: column, @wrap: nowrap, @al: center);
+	justify-content: center;
+	// border: 2px solid red;
+	
+	@media only screen and (max-width: 959px)
+	{
+		width: 100%;
+	}
+}
+.product_image
+{
+	.w100();
+	height: 450px;
+	.imgbgcent();
+
+	@media only screen and (max-width: 1380px)
+	{
+		height: 400px;
+	}
+
+	@media only screen and (max-width: 1100px)
+	{
+		background-size: contain;
+	}
+
+	@media only screen and (max-width: 959px)
+	{
+		height: 375px;
+		margin: 5% 0;
+	}
+
+	@media only screen and (max-width: 767px)
+	{
+		height: 250px;
+		margin-bottom: 2%;
+		background-size: contain;
+	}
+
+	@media only screen and (max-width: 480px)
+	{
+		height: 150px;
+	}
+
+}
+
+.product_name
+{
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #232323;
+	.trans200();
+
+	@media only screen and (max-width: 1380px)
+	{
+		font-size: 1.1rem;
+	}
+
+	@media only screen and (max-width: 1100px)
+	{
+		font-size: 1rem;
+	}
+
+	@media only screen and (max-width: 959px)
+	{
+		font-size: 2.1rem;
+	}
+
+	@media only screen and (max-width: 767px)
+	{
+		font-size: 1.8rem;
+	}
+
+	@media only screen and (max-width: 575px)
+	{
+		font-size: 1.5rem;
+	}
+
+	@media only screen and (max-width: 400px)
+	{
+		font-size: .9rem;
+	}
+
+
+}
+
+.product_name span
+{
+	@media only screen and (max-width: 575px)
+	{
+		display: block;
+		text-align: center;
+	}
+}
+
+.product_name a:hover
+{
+	color: #937c6f;
+}
+.product_price
+{
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #8a8a8a;
+	.txtAlCent();
+}
+#product_1
+{
+	background-image: url("../../images/product_3.jpg");
+
+	@media only screen and (max-width: 959px)
+	{
+		background-image: url("../../images/product_3_small.jpg");
+	}
+}
+#product_2
+{
+	background-image: url("../../images/product_1.jpg");
+
+	@media only screen and (max-width: 959px)
+	{
+		background-image: url("../../images/product_1_small.jpg");
+	}
+}
+#product_3
+{
+	background-image: url("../../images/product_2.jpg");
+
+	@media only screen and (max-width: 959px)
+	{
+		background-image: url("../../images/product_2_small.jpg");
+	}
+}
+

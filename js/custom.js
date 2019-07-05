@@ -164,21 +164,26 @@ $(document).ready(function()
 
 //NiCe ScRoLl//	
 
-	const homeRect = document.getElementById('home_container').getBoundingClientRect();
-	const homeTop = homeRect.top;
-	const homeBot = homeRect.bottom;
+	// const homeRect = document.getElementById('home_container').getBoundingClientRect();
+	// const homeTop = homeRect.top;
 
-	const collRect = document.getElementById('collections').getBoundingClientRect();
-	const collTop = collRect.top;
-	const collBot = collRect.bottom;
+	// const homeRect = document.getElementById('home_container').getBoundingClientRect();
+	const homeTop = (document.getElementById('home_container').getBoundingClientRect()).top;
 
-	const arrivRect = document.getElementById('arrivals').getBoundingClientRect();
-	const arrivTop = arrivRect.top;
-	const arrivBot = arrivRect.bottom;
 
-	const extRect = document.getElementById('extra').getBoundingClientRect();
-	const extTop = extRect.top;
-	const extBot = extRect.bottom;
+	const collTop = (document.getElementById('collections').getBoundingClientRect()).top;
+	// const collTop = collRect.top;
+
+
+	// const arrivRect = document.getElementById('arrivals').getBoundingClientRect();
+	const arrivTop = (document.getElementById('arrivals').getBoundingClientRect()).top;
+
+	// const extRect = document.getElementById('extra').getBoundingClientRect();
+	const extTop = (document.getElementById('extra').getBoundingClientRect()).top;
+
+	const testTop = (document.getElementById('testimonials').getBoundingClientRect()).top;
+	
+	const igTop = (document.getElementById('instafeed').getBoundingClientRect()).top;
 
 
 
@@ -203,66 +208,94 @@ $(document).ready(function()
 	// Initial state
 	var scrollPos = 0;
 	// adding scroll event
-	// window.addEventListener('scroll', throttle(function() {
-	// 	if ((document.body.getBoundingClientRect()).top > scrollPos) {
-	// 		if (pageYOffset > extTop) {
-	// 			// window.scrollTo(0,extTop)
-	// 			window.scrollTo({
-	// 				top: extTop,
-	// 				left: 0,
-	// 				behavior: 'smooth',
-	// 			  })
-	// 		} else if (pageYOffset > arrivTop) {
-	// 			// window.scrollTo(0,arrivTop)
-	// 			window.scrollTo({
-	// 				top: arrivTop,
-	// 				left: 0,
-	// 				behavior: 'smooth',
-	// 			  })
-	// 		} else if (pageYOffset > collTop) {
-	// 			window.scrollTo({
-	// 				top: collTop,
-	// 				left: 0,
-	// 				behavior: 'smooth',
-	// 			  })
-	// 			// window.scrollTo(0,collTop)
-	// 		} else if (pageYOffset > homeTop) {
-	// 			window.scrollTo({
-	// 				top: homeTop,
-	// 				left: 0,
-	// 				behavior: 'smooth',
-	// 			  })
-	// 			// window.scrollTo(0,homeTop)
-	// 		}
-	// 	} else {
-	// 		// if (pageYOffset < homeTop) {
-	// 		// 	window.scrollTo(0,homeTop)
-	// 		// }
-	// 		if (pageYOffset < collTop) {
-	// 			// window.scrollTo(0,collTop)
-	// 			window.scrollTo({
-	// 				top: collTop,
-	// 				left: 0,
-	// 				behavior: 'smooth',
-	// 			  })
-	// 		} else if (pageYOffset < arrivTop) {
-	// 			// window.scrollTo(0,arrivTop)
-	// 			window.scrollTo({
-	// 				top: arrivTop,
-	// 				left: 0,
-	// 				behavior: 'smooth',
-	// 			  })
-	// 		} else if (pageYOffset < extTop) {
-	// 			// window.scrollTo(0,extTop)
-	// 			window.scrollTo({
-	// 				top: extTop,
-	// 				left: 0,
-	// 				behavior: 'smooth',
-	// 			  })
-	// 		}
-	// 	}		// saves the new position for iteration.
-	// 	scrollPos = (document.body.getBoundingClientRect()).top;
-	// 	}, 1000))
+	window.addEventListener('scroll', throttle(function() {
+		if ((document.body.getBoundingClientRect()).top > scrollPos) {
+			if (pageYOffset > igTop) {
+				// window.scrollTo(0,extTop)
+				window.scrollTo({
+					top: igTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} else if (pageYOffset > testTop) {
+				// window.scrollTo(0,extTop)
+				window.scrollTo({
+					top: testTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} else if (pageYOffset > extTop) {
+				// window.scrollTo(0,extTop)
+				window.scrollTo({
+					top: extTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} else if (pageYOffset > arrivTop) {
+				// window.scrollTo(0,arrivTop)
+				window.scrollTo({
+					top: arrivTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} else if (pageYOffset > collTop) {
+				window.scrollTo({
+					top: collTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+				// window.scrollTo(0,collTop)
+			} else if (pageYOffset > homeTop) {
+				window.scrollTo({
+					top: homeTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+				// window.scrollTo(0,homeTop)
+			}
+		} else {
+			// if (pageYOffset < homeTop) {
+			// 	window.scrollTo(0,homeTop)
+			// }
+			if (pageYOffset < collTop) {
+				// window.scrollTo(0,collTop)
+				window.scrollTo({
+					top: collTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} else if (pageYOffset < arrivTop) {
+				// window.scrollTo(0,arrivTop)
+				window.scrollTo({
+					top: arrivTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} else if (pageYOffset < extTop) {
+				// window.scrollTo(0,extTop)
+				window.scrollTo({
+					top: extTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} else if (pageYOffset < testTop) {
+				// window.scrollTo(0,extTop)
+				window.scrollTo({
+					top: testTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} else if (pageYOffset < igTop) {
+				// window.scrollTo(0,extTop)
+				window.scrollTo({
+					top: igTop,
+					left: 0,
+					behavior: 'smooth',
+				  })
+			} 
+		}		// saves the new position for iteration.
+		scrollPos = (document.body.getBoundingClientRect()).top;
+		}, 600))
 	// detects new state and compares it with the new one
 	
 

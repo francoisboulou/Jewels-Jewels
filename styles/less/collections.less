@@ -1,0 +1,111 @@
+/*********************************
+ Collections
+*********************************/
+
+.overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 1s;
+
+	p {
+		font-size: 2rem;
+		color: white;
+	}
+	
+}
+
+#collections
+{
+	// .flex(@dir: column, @jus: space-around);
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+	width: 100%;
+
+
+
+	@media only screen and (max-width: 767px)
+	{
+		margin-top: 10%;
+	}
+
+}
+
+
+#collections_right {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.collections_image
+{
+	.imgbgcent();
+
+	&:hover > .overlay {
+		opacity: .65;
+	}
+	
+	@media only screen and (max-width: 959px)
+	{
+		height: 300px;
+	}
+
+	@media only screen and (max-width: 767px)
+	{
+		height: 250px;
+	}
+
+	@media only screen and (max-width: 575px)
+	{
+		height: 200px;
+	}
+
+	@media only screen and (max-width: 400px)
+	{
+		height: 100px;
+	}
+
+}
+#collections_image_1
+{
+	width: 50%;
+	background-image: url("../../images/promo_1.jpg");
+	 
+
+	@media only screen and (max-width: 959px)
+	{
+		background-image: url("../../images/promo_1_small.jpg");
+	}
+}
+
+#collections_image_2
+{
+	background-image: url("../../images/promo_2.jpg");
+	height: 50%;
+
+	@media only screen and (max-width: 959px)
+	{
+		margin: 3% 0;
+	}
+
+	@media only screen and (max-width: 959px)
+	{
+		background-image: url("../../images/promo_2_small.jpg");
+	}
+}
+#collections_image_3
+{
+	background-image: url("../../images/promo_3.jpg");
+	height: 50%;
+
+
+	@media only screen and (max-width: 959px)
+	{
+		background-image: url("../../images/promo_3_small.jpg");
+	}
+}

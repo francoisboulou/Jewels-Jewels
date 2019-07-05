@@ -10,7 +10,7 @@
 {
     display: none;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     -webkit-tap-highlight-color: transparent;
     /* position relative and z-index fix webkit rendering fonts issue */
     position: relative;
@@ -21,7 +21,7 @@
     position: relative;
     -ms-touch-action: pan-Y;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     -moz-backface-visibility: hidden;
     /* fix firefox animation glitch */
 }
@@ -39,7 +39,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     /* fix for flashing background */
     -webkit-transform: translate3d(0px, 0px, 0px);
 }
@@ -58,7 +58,7 @@
     position: relative;
     min-height: 1px;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     float: left;
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;

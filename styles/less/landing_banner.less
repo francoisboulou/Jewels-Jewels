@@ -191,6 +191,22 @@
  Collections
 *********************************/
 
+.overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 1s;
+
+	p {
+		font-size: 2rem;
+		color: white;
+	}
+	
+}
+
 #collections
 {
 	// .flex(@dir: column, @jus: space-around);
@@ -199,41 +215,30 @@
 	height: 100vh;
 	width: 100%;
 
+
+
 	@media only screen and (max-width: 767px)
 	{
 		margin-top: 10%;
 	}
 
 }
-// .collections_item
-// {
-// 	.w(100%);
-// 	height: 450px;
-
-// 	@media only screen and (max-width: 400px)
-// 	{
-// 		padding: 5% 0;
-// 	}
-// }
 
 
 #collections_right {
 	display: flex;
 	flex-direction: column;
-	width: 49%;
+	width: 50%;
 }
 
 .collections_image
 {
-	// .w100();
-	// height: 450px;
 	.imgbgcent();
 
-	// @media only screen and (max-width: 1380px)
-	// {
-	// 	height: 400px;
-	// }
-
+	&:hover > .overlay {
+		opacity: .65;
+	}
+	
 	@media only screen and (max-width: 959px)
 	{
 		height: 300px;
@@ -259,6 +264,7 @@
 {
 	width: 50%;
 	background-image: url("../../images/promo_1.jpg");
+	 
 
 	@media only screen and (max-width: 959px)
 	{
@@ -299,7 +305,9 @@
 
 #arrivals
 {
-	.flex(@jus: space-around);
+	display: flex;
+	justify-content: center;
+	align-content: center;
 	height: 100vh;
 
 	@media only screen and (max-width: 400px)
@@ -311,7 +319,9 @@
 {
 	.w(30%);
 	.flex(@dir: column, @wrap: nowrap, @al: center);
-
+	justify-content: center;
+	// border: 2px solid red;
+	
 	@media only screen and (max-width: 959px)
 	{
 		width: 100%;
@@ -449,8 +459,11 @@
 #extra
 {
 	.flex(@wrap: nowrap, @jus: space-between);
-	.w100();
-	margin: 15% 0;
+	// .w100();
+	padding: 0 5%;
+	// border: 2px solid red;
+	height: 100vh;
+	align-items: center;
 
 	@media only screen and (max-width: 959px)
 	{
@@ -841,12 +854,18 @@
 
 #testimonials
 {
-	margin: 15% 0 20% 0;
+	margin: 0 5%;
+	// border: 2px solid red;
+	height: 100vh;
+	display: flex;
+	align-content: center;
+	align-items: center;
 }
 
 .test_text
 {
 	.w(85%);
+
 	margin: 0 auto;
 	font-family: 'Lucida', serif;
 	font-weight: lighter;
@@ -890,11 +909,13 @@
 }
 
 #instafeed {
+	height: 100vh;
 	margin: 0 auto;
 	width: 90%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 
 
 	img {
