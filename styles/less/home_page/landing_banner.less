@@ -2,123 +2,67 @@
 
 #home_container
 {
-	.w100();
 	height: 100vh;
+	width: 100vw;
 	background-image:url("../../images/home_background.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	position: relative;
+	
+	@media only screen and (max-width: 1200px)
+	{
+		background-image: url("../../images/home_background_small.jpg");
+		display: flex;
+		justify-content: center;
+	}
+
+	@media only screen and (min-width: 801px) and (max-width: 1200px)
+	{
+		background-position: 25%;
+	}
+
+	@media only screen and (max-width: 800px)
+	{
+		background-image: url("../../images/home_background_smaller.jpg");
+		background-position: 35%;
+	}
+
+	@media only screen and (max-width: 600px)
+	{
+		background-image: url("../../images/home_background_smallest.jpg");	
+	}
 
 	div {
-		position: relative;
+		position: absolute;
 		width: 45%;
-		top: 60%;
-		left: 3vw;
+		top: 50%;
 		.transY-50();
 		.flex(@dir: column, @wrap: nowrap, @jus: center, @al: center);
 		z-index: 10;
 
-		@media only screen and (max-width: 1199px)
-		{
-			left: 5vw;
-		}
+		.mobile_header {
+			text-align: center;
 
-		@media only screen and (max-width: 991px)
-		{
-			top: 40%;
-			left: 50%;
-			.transX-50();
-		}
-
-		@media only screen and (max-width: 400px)
-		{
-			top: 50%;
-		}
-
-		h1 {
-			// .test(red);
-			font-size: 5.5rem;
-			font-family: 'Bentham', serif;
-			font-weight: 100;
-			letter-spacing: .025em;
-			color: @dgray;
-			white-space: nowrap;
-	
-			@media only screen and (max-width: 575px)
+			@media only screen and (min-width: 700px)
 			{
-				font-size: 4.5rem;
-			}
-	
-			@media only screen and (max-width: 480px)
-			{
-				font-size: 4rem;
-			}
-	
-			@media only screen and (max-width: 400px)
-			{
-				font-size: 3rem;
-	
+				display: none;
 			}
 		}
 
-		h2 {
-			color: @dgray;
-			font-family: 'Bentham', serif;
-			font-weight: 100;
-			font-size: 1.5rem;
-			white-space: nowrap;
-			margin-top: 15px;
-
-			@media only screen and (max-width: 575px)
+		.comp_header {
+			@media only screen and (max-width: 700px)
 			{
-				font-size: 1.4rem;
-			}
-
-			@media only screen and (max-width: 400px)
-			{
-				font-size: 1rem;
+				display: none;
 			}
 		}
 
 		.button
 		{
 			margin-top: 60px;
-
-			@media only screen and (max-width: 400px)
-			{
-				margin-top: 30px;
-				width: 150px;
-				padding: 10px 0;
-				font-size: .85rem;
-			}
 		}
 	}
-
-	@media only screen and (max-width: 991px)
-	{
-		background-image: url("../../images/home_background_small.jpg");
-	}
-
-	@media only screen and (max-width: 767px)
-	{
-		background-image: url("../../images/home_background_smaller.jpg");
-	}
-
-	@media only screen and (max-width: 400px)
-	{
-		background-image: url("../../images/home_background_smallest.jpg");
-	}
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

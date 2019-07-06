@@ -31,7 +31,7 @@ $(document).ready(function()
 	let header = document.getElementById('header');
 	let menuActive = false;
 	let menu = document.getElementById('menu');
-	let burger = document.getElementById('burger_container');
+	let burger = document.getElementById('burger_button');
 	
 	const arrowOne = document.getElementById('instarrow1')
 	let instaImgs = document.getElementsByClassName('instaimg')
@@ -116,7 +116,7 @@ $(document).ready(function()
 	{
 		if(menu)
 		{
-			if(burger_container)
+			if(burger_button)
 			{
 				burger.onclick = function()
 				{
