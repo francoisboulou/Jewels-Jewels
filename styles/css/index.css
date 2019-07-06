@@ -39,13 +39,14 @@
 }
 .button {
   font-size: 1rem;
+  border: 1px solid black;
   font-family: 'Open Sans';
   text-transform: uppercase;
   color: black;
   letter-spacing: 0.2em;
   width: 190px;
-  padding: 20px 0;
-  border: none;
+  height: 65px;
+  line-height: 65px;
   outline: none;
   background: white;
   opacity: 0.6;
@@ -392,12 +393,18 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
+.footer_nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: end;
+  align-items: center;
+  margin-top: auto;
+}
 footer a {
-  font-family: 'Lucida', serif;
-  font-weight: lighter;
   font-size: 3.5rem;
   color: #232323;
   margin-bottom: 2%;
@@ -423,7 +430,7 @@ footer a {
   }
 }
 footer nav {
-  width: 35%;
+  width: 100%;
   margin-bottom: 4%;
 }
 @media only screen and (max-width: 959px) {
@@ -467,7 +474,7 @@ footer nav ul li a:hover {
   color: #937c6f;
 }
 #social {
-  width: 5%;
+  width: 15%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -507,9 +514,26 @@ footer p {
   }
 }
 .newsletter {
+  width: 50%;
+  text-align: center;
+  margin-top: auto;
+  align-self: center;
+}
+.newsletter h1 {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  font-size: 3.37rem;
+  margin-bottom: 2.5%;
+}
+.newsletter form {
+  width: 100%;
+  display: inline-flex;
+}
+.newsletter input.newsletter_input {
+  width: calc(100% - 191px);
+  height: 65px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-right: none;
 }
 #home_container {
   width: 100%;
@@ -1103,6 +1127,24 @@ footer p {
     font-size: 0.9rem;
   }
 }
+#instaCont {
+  background: black;
+  position: relative;
+}
+.arrow {
+  font-size: 2rem;
+  position: absolute;
+}
+#instarrow1 {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#instarrow2 {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 #instafeed {
   position: relative;
   height: 100vh;
@@ -1114,12 +1156,14 @@ footer p {
 }
 #instafeed .instaimg {
   position: relative;
+  left: 0;
   width: 100%;
   height: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: left 1s;
 }
 /********************************
 ABOUT SECTION

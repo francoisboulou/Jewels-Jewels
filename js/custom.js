@@ -26,41 +26,61 @@ $(document).ready(function()
 
 	*/
 
+	const arrowTwo = document.getElementById('instarrow2')
+	
 	let header = document.getElementById('header');
 	let menuActive = false;
 	let menu = document.getElementById('menu');
 	let burger = document.getElementById('burger_container');
+	
+	const arrowOne = document.getElementById('instarrow1')
+	let instaImgs = document.getElementsByClassName('instaimg')
+	let leftPos = 0;
 
+	function instaScroll() {
 
+		if (event.target === arrowOne) {
+			if (leftPos <= -(instaImgs.length * 100)) {
+				console.log('no more scrolling');
+				return
+			} else {
+				leftPos -= 100;
+				for(let i = 0; i < instaImgs.length; i++) {
+					instaImgs[i].style.left = leftPos + '%';
+				}
+			}
+		} else {
+			if (leftPos >= 0) {
+				console.log('no more scrolling');
+				return
+			} else {
+				leftPos += 100;
+				for(let i = 0; i < instaImgs.length; i++) {
+					instaImgs[i].style.left = leftPos + '%';
+				}
+			}
+			
+		}	
+	}	
+	
+	
+	arrowOne.addEventListener('click', instaScroll);
+	arrowTwo.addEventListener('click', instaScroll);
+		
 
 	/*
 	2. Set Header
 	*/
+	var prevScrollpos = window.pageYOffset;
 
-	function setHeader()
-	{
-
-		if ((document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) && ($(window).width() < 991)) {
-			header.classList.add("scrolled");
-			header.style.backgroundColor = 'rgba(255,255,255,.8)';
-		}
-		else if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
-		{
-			header.classList.add("scrolled");
-
-		}
-		else if ((document.body.scrollTop < 100 || document.documentElement.scrollTop < 100) && ($(window).width() < 991))
-		{
-			header.classList.remove("scrolled");
-
-			header.style.backgroundColor = 'rgba(255,255,255,0)';
-		}
-		else if ((document.body.scrollTop < 100 || document.documentElement.scrollTop < 100) && ($(window).width() > 991))
-		{
-			header.classList.remove("scrolled");
-
-			header.style.backgroundColor = 'rgba(255,255,255,.5)';
-		}
+	function setHeader() {
+		var currentScrollPos = window.pageYOffset;
+  		if (prevScrollpos < currentScrollPos) {
+    		header.classList.add("scrolled");
+  		} else {
+    		header.classList.remove("scrolled");;
+  		}
+  		prevScrollpos = currentScrollPos;
 	}
 
 	setHeader();
@@ -263,6 +283,7 @@ $(document).ready(function()
 		}, 600))
 	}
 
+	// instaScroll();
 	userFeed.run();
 	// niceScroll();
 	initMenu();

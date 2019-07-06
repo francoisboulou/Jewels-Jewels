@@ -2,16 +2,21 @@
 footer
 {
 	height: 100vh;
-	.flex(@dir: column, @wrap: nowrap, @al: center, @jus: space-around,);
+	.flex(@dir: column, @wrap: nowrap, @al: center, @jus: center,);
+	// border: 2px solid red;
 }
 
+.footer_nav {
+	.flex(@dir: column, @wrap: nowrap, @al: center, @jus: end,);
+	margin-top: auto;
+}
 
 footer a
 {
-	.lucida();
 	font-size: 3.5rem;
 	color: #232323;
 	margin-bottom: 2%;
+	// border: 2px solid red;
 
   @media only screen and (max-width: 768px)
   {
@@ -37,8 +42,10 @@ footer a
 
 footer nav
 {
-	.w(35%);
+	.w(100%);
 	margin-bottom: 4%;
+	// border: 2px solid yellow;
+
 
   @media only screen and (max-width: 959px)
   {
@@ -51,6 +58,8 @@ footer nav ul
 {
 	.w100();
 	.flex(@wrap: nowrap, @jus: space-between);
+	// border: 2px solid blue;
+
 
   @media only screen and (max-width: 480px)
   {
@@ -85,8 +94,9 @@ footer nav ul li a:hover
 
 #social
 {
-	.w(5%);
+	.w(15%);
 	.flex(@wrap: nowrap, @jus: space-between);
+	// border: 2px solid green;
 
   @media only screen and (max-width: 767px)
   {
