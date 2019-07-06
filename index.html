@@ -55,8 +55,8 @@
 
 			<section id="home_container">
 				<div>
-						<h1>Spring Sale</h1>
-						<h2>20% off Diamond Fashions</h2>
+						<h1>SPRING SALE</h1>
+						<h2>20% OFF DIAMOND STYLES</h2>
 						<a class="button" href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items">Shop Now</a>
 				</div>
 			</section>
@@ -82,51 +82,38 @@
 				<!-- <h1 class="section_title">new arrivals</h1> -->
 
 				<!-- Product -->
-				<div class="product">
-					<img class="product_image" src="images/product_3.jpg" alt="">
-					<div class="product_info">
-						<a class="product_name" href="">Engagement Ring</a>
+				<a class="product" href="#">
+					<div id='product_1' class="product_image"></div>
+					<div class="product_info product_name">
+						<span>Sunstone Ring</span> 
 						<p class="product_price">$145.00</p>
 					</div>
-				</div>
+				</a>
 
 				<!-- Product -->
-				<div class="product">
-					<img class="product_image" src="images/product_1.jpg" alt="">
-					<div class="product_info">
-						<a class="product_name" href="https://www.etsy.com/listing/682051286/vintage-victorian-18k-white-gold?ref=shop_home_active_24&frs=1"><span>Victorian</span> <span>White Gold</span> <span>Diamond Ring</span></a>
+				<a class="product" href="https://www.etsy.com/listing/682051286/vintage-victorian-18k-white-gold?ref=shop_home_active_24&frs=1">
+					<div id='product_2' class="product_image"></div>
+					<div class="product_info product_name">
+						<span>Victorian</span> <span>White Gold</span> <span>Diamond Ring</span>
 						<p class="product_price">$1,350.00</p>
 					</div>
-				</div>
+				</a>
 
 				<!-- Product -->
-				<div class="product">
-					<img class="product_image" src="images/product_2.jpg" alt="">
-					<div class="product_info">
-						<a class="product_name" href="https://www.etsy.com/listing/682056282/substantial-natural-star-sapphire-and?ref=shop_home_active_23&frs=1"><span>White Gold</span> <span>Star Saphire Ring</span></a>
+				<a class="product" href="https://www.etsy.com/listing/682056282/substantial-natural-star-sapphire-and?ref=shop_home_active_23&frs=1">
+					<div id='product_3' class="product_image"></div>
+					<div class="product_info product_name">
+						<span>White Gold</span> <span>Star Saphire Ring</span>
 						<p class="product_price">$1,285.00</p>
-					</div>
-				</div>
+					</div>					
+				</a>
 			</section>
 
 
 				<!-- Extra -->
 			<section id="extra">
-			<section class="extra_promo" id="extra_promo_1" style="background-image:url(images/extra_1.jpg)">
-					<div class="extra_content" id="extra_1">
-						<p id="extra_1_price">20%<span> off</span></p>
-						<p id="extra_1_title">All Diamond Jewelry</p>
-						<p id="extra_1_text">Limited time offer. Offer may not be combined with any other sale, promotion, discount, code, or coupon.</p>
-						<a class="button" href="checkout.php">shop now</a>
-					</div>
-				</section>
-
-				<section class="extra_promo" id="extra_promo_2">
-					<div class="extra_content" id="extra_2">
-						<div id="extra_2_text">Native<br>American<br>Collection</div>
-						<a class="button" href="checkout.php">shop now</a>
-					</div>
-				</section>
+				<div id="extra_text">Native American Collection</div>
+				<a class="button" href="checkout.php">shop now</a>
 			</section>
 
 				<!-- Testimonials -->
@@ -156,15 +143,10 @@
 					</div>
 
 				</div>
-			</section>
-
-				
-
-			<section>
+			</section>	
+			<section id='instaCont'>
 				<div id='instafeed'></div>
 			</section>
-
-			<!-- Newsletter -->
 			
 			
 		</article>
@@ -175,31 +157,31 @@
 	<!-- Footer -->
 
 	<footer>
-		<section class="newsletter newsletter_image" style="background-image:url(images/newsletter.jpg)">
-			<div class="newsletter_content">
-				<h1>subscribe for a 20% discount</h1>
-				<form action="#">
-					<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
-					<button type="submit" class="button">subscribe</button>
-				</form>
-				<p class="newsletter_text">One time offer. Offer may not be combined with any other sale, promotion, discount, code, or coupon.</p>
-			</div>
-		</section>
-		<a href="#">Ruby's Vintage Jewelry</a>
-		<nav>
-			<ul>
-				<li><a href="#">home</a></li>
-				<li><a href="about.php">about</a></li>
-				<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items">store</a></li>
-				<li><a href="contact.php">contact</a></li>
+		<div class="newsletter_content">
+			<h1>subscribe for a 20% discount</h1>
+			<form action="#">
+				<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
+				<button type="submit" class="button">subscribe</button>
+			</form>
+			<p class="newsletter_text">One time offer. Offer may not be combined with any other sale, promotion, discount, code, or coupon.</p>
+		</div>
+
+		<section>
+			<a href="#">Ruby's Vintage Jewelry</a>
+			<nav>
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="about.php">about</a></li>
+					<li><a href="https://www.etsy.com/shop/rubysvintagejewelry?ref=condensed_trust_header_title_items">store</a></li>
+					<li><a href="contact.php">contact</a></li>
+				</ul>
+			</nav>
+			<ul id="social">
+				<li><a href="https://www.facebook.com/rubylayneandtiffany/"><i class="fa fa-facebook" aria hidden+"true"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 			</ul>
-		</nav>
-		<ul id="social">
-			<li><a href="https://www.facebook.com/rubylayneandtiffany/"><i class="fa fa-facebook" aria hidden+"true"></i></a></li>
-			<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-		</ul>
+		</section>
 		<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by Francois Boulou</p>
-		<!-- https://www.pexels.com/photo/woman-wears-gold-colored-blue-gemstone-pendant-necklace-1035683/ -->
 	</footer>
 
 <script src="js/jquery-3.2.1.min.js"></script>

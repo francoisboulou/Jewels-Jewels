@@ -1,0 +1,23 @@
+.button {
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0.2em;
+  width: 190px;
+  padding: 20px 0;
+  border: none;
+  outline: none;
+  background: white;
+  opacity: 0.6;
+  text-align: center;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 1;
+}

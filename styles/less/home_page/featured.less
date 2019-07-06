@@ -1,6 +1,4 @@
-/*********************************
-7. New Arrivals
-*********************************/
+@import "../tools/mixins.less";
 
 #arrivals
 {
@@ -14,6 +12,7 @@
 		margin: 15% 0;
 	}
 }
+
 .product
 {
 	.w(30%);
@@ -26,6 +25,7 @@
 		width: 100%;
 	}
 }
+
 .product_image
 {
 	.w100();
@@ -65,7 +65,7 @@
 .product_name
 {
 	font-size: 1.3rem;
-	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
 	color: #232323;
 	.trans200();
 
@@ -118,31 +118,50 @@
 .product_price
 {
 	font-size: 1.5rem;
-	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
 	color: #8a8a8a;
 	.txtAlCent();
 }
+
 #product_1
 {
 	background-image: url("../../images/product_3.jpg");
+	transition: background-image 1s;
+
+
+	&:hover {
+		background-image: url("../../images/product_3_flip.jpg");
+	}
 
 	@media only screen and (max-width: 959px)
 	{
 		background-image: url("../../images/product_3_small.jpg");
 	}
 }
+
 #product_2
 {
 	background-image: url("../../images/product_1.jpg");
+	transition: background-image 1s;
+
+	&:hover {
+		background-image: url("../../images/product_1_flip.jpg");
+	}
 
 	@media only screen and (max-width: 959px)
 	{
 		background-image: url("../../images/product_1_small.jpg");
 	}
 }
+
 #product_3
 {
 	background-image: url("../../images/product_2.jpg");
+	transition: background-image 1s;
+	
+	&:hover {
+		background-image: url("../../images/product_2_flip.jpg");
+	}
 
 	@media only screen and (max-width: 959px)
 	{

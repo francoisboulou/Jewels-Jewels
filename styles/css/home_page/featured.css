@@ -1,0 +1,151 @@
+#arrivals {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+@media only screen and (max-width: 400px) {
+  #arrivals {
+    margin: 15% 0;
+  }
+}
+.product {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 959px) {
+  .product {
+    width: 100%;
+  }
+}
+.product_image {
+  width: 100%;
+  height: 450px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 1380px) {
+  .product_image {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .product_image {
+    background-size: contain;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .product_image {
+    height: 375px;
+    margin: 5% 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .product_image {
+    height: 250px;
+    margin-bottom: 2%;
+    background-size: contain;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .product_image {
+    height: 150px;
+  }
+}
+.product_name {
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #232323;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+@media only screen and (max-width: 1380px) {
+  .product_name {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .product_name {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .product_name {
+    font-size: 2.1rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .product_name {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .product_name {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .product_name {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .product_name span {
+    display: block;
+    text-align: center;
+  }
+}
+.product_name a:hover {
+  color: #937c6f;
+}
+.product_price {
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #8a8a8a;
+  text-align: center;
+}
+#product_1 {
+  background-image: url("../../images/product_3.jpg");
+  transition: background-image 1s;
+}
+#product_1:hover {
+  background-image: url("../../images/product_3_flip.jpg");
+}
+@media only screen and (max-width: 959px) {
+  #product_1 {
+    background-image: url("../../images/product_3_small.jpg");
+  }
+}
+#product_2 {
+  background-image: url("../../images/product_1.jpg");
+  transition: background-image 1s;
+}
+#product_2:hover {
+  background-image: url("../../images/product_1_flip.jpg");
+}
+@media only screen and (max-width: 959px) {
+  #product_2 {
+    background-image: url("../../images/product_1_small.jpg");
+  }
+}
+#product_3 {
+  background-image: url("../../images/product_2.jpg");
+  transition: background-image 1s;
+}
+#product_3:hover {
+  background-image: url("../../images/product_2_flip.jpg");
+}
+@media only screen and (max-width: 959px) {
+  #product_3 {
+    background-image: url("../../images/product_2_small.jpg");
+  }
+}
