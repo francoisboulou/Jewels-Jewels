@@ -64,8 +64,8 @@ $(document).ready(function()
 	}	
 	
 	
-	arrowOne.addEventListener('click', instaScroll);
-	arrowTwo.addEventListener('click', instaScroll);
+	// arrowOne.addEventListener('click', instaScroll);
+	// arrowTwo.addEventListener('click', instaScroll);
 		
 
 	/*
@@ -185,7 +185,7 @@ $(document).ready(function()
 //NiCe ScRoLl//	
 	function niceScroll() {
 
-		const homeTop = (document.getElementById('home_container').getBoundingClientRect()).top;
+		const homeTop = (document.getElementById('banner').getBoundingClientRect()).top;
 		const collTop = (document.getElementById('collections').getBoundingClientRect()).top;
 		const arrivTop = (document.getElementById('arrivals').getBoundingClientRect()).top;
 		const extTop = (document.getElementById('extra').getBoundingClientRect()).top;
@@ -280,12 +280,28 @@ $(document).ready(function()
 				} 
 			}	
 			scrollPos = (document.body.getBoundingClientRect()).top;
-		}, 600))
+		}, 2000))
 	}
+
+	function isMobile() {
+		try{ document.createEvent("TouchEvent"); return true; }
+		catch(e){ return false; }
+	  }
+
+	function onHoverAdd() {
+		if (isMobile()) {
+			$(".overlay").hover(function(){
+				$(this).css("background-color", "yellow");
+				}, function(){
+				$(this).css("background-color", "pink");
+			  });
+		}
+	}  
 
 	// instaScroll();
 	userFeed.run();
 	// niceScroll();
+	onHoverAdd();
 	initMenu();
 	initTestSlider();
 
