@@ -1,0 +1,41 @@
+@import "../../utilities/mixins.less";
+@import "../../utilities/components.less";
+@import "../../utilities/variables.less";
+@import "../../utilities/fonts.less";
+
+
+#header
+{
+	position: fixed;
+	height: @header_height;
+	top: 0;
+	width: 100%;
+	background: rgba(255,255,255,.5);
+	z-index: 100;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	-webkit-transition: all .75s ease;
+	-moz-transition: all .75s ease;
+	-ms-transition: all .75s ease;
+	-o-transition: all .75s ease;
+    transition: all .75s ease;
+    
+    @media only screen  and (min-width : 1824px) {
+        height: @header_height + 150px;
+    }
+
+	@media only screen and (max-width: 800px) {
+		height: @header_height_small;
+	}
+}
+
+#header.scrolled
+{
+	top: -200px;
+
+	@media only screen and (max-width: 766px)
+	{
+		height: 110px;
+	}
+}

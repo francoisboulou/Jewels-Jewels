@@ -1,0 +1,63 @@
+@import "../../utilities/mixins.less";
+@import "../../utilities/components.less";
+@import "../../utilities/variables.less";
+@import "../../utilities/fonts.less";
+
+
+.newsletter {
+    width: 50%;
+    // border: 2px solid red;
+    text-align: center;
+    align-self: center;
+    // border: 2px solid red;
+
+    @media only screen and (max-width: 959px) {
+        width: 75%;
+    }
+
+    h1 {
+        // border: 2px solid red;
+        font-size: 3.37rem;
+        margin-bottom: 2.5%;
+
+        @media only screen and (max-width: 959px) {
+            font-size: 2.5rem;
+            margin-bottom: 4%;
+
+        }
+    }
+
+    form {
+        width: 100%;
+        display: inline-flex;
+
+        @media only screen and (max-width: 959px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    input.newsletter_input {
+        width: calc(100% - 191px);
+        height: 65px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        border-right: none;
+
+        @media only screen and (max-width: 959px) {
+            height: 35px;
+            width: 100%;
+            border-right: 1px solid black;
+            border-bottom: none;
+        }
+    }
+
+    .button {
+        @media only screen and (max-width: 959px) {
+            height: 35px;
+            line-height: 35px;
+            width: 100%;
+        }
+    }
+}

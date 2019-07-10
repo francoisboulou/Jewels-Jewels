@@ -1,0 +1,97 @@
+.button {
+  display: block;
+  border: 1px solid black;
+  font-family: 'Monserrat';
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0.2em;
+  outline: none;
+  background: white;
+  opacity: 0.6;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+  text-align: center;
+}
+.button:hover {
+  opacity: 1;
+}
+@font-face {
+  font-family: 'Bentham';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bentham Regular'), local('Bentham-Regular'), url(https://fonts.gstatic.com/s/bentham/v9/VdGeAZQPEpYfmHglGWsxDA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm45_QpRyS7j.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Beyond';
+  src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
+}
+#testimonials {
+  margin: 0 5%;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.test_text {
+  width: 85%;
+  margin: 0 auto;
+  font-family: 'Montserrat', serif;
+  font-weight: lighter;
+  font-size: 2.25rem;
+  color: #8a8a8a;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.75;
+}
+@media only screen and (max-width: 767px) {
+  .test_text {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .test_text {
+    font-size: 1.2rem;
+  }
+}
+.test_name {
+  font-family: 'Bentham', serif;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #232323;
+  margin-top: 2%;
+}

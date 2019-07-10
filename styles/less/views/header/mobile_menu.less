@@ -1,0 +1,67 @@
+@import "../../utilities/mixins.less";
+@import "../../utilities/components.less";
+@import "../../utilities/variables.less";
+@import "../../utilities/fonts.less";
+
+
+#menu
+{
+	position: fixed;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+	right: -100%;
+	width: 100%;
+	height: 100vh;
+	background: @white;
+	z-index: 101;
+	transition: right .50s;
+}
+
+#menu.active
+{
+	right: 0;
+}
+
+#menu_close_container
+{
+	position: absolute;
+	top: 30px;
+	right: 25px;
+	.w(30px);
+	height: 30px;
+	.rot45();
+}
+
+#menu_close div
+{
+	.w100();
+	height: 2px;
+	background: #232323;
+}
+
+#menu_close div:last-of-type
+{
+	-webkit-transform: rotate(90deg) translateX(-2px);
+	-moz-transform: rotate(90deg) translateX(-2px);
+	-ms-transform: rotate(90deg) translateX(-2px);
+	-o-transform: rotate(90deg) translateX(-2px);
+	transform: rotate(90deg) translateX(-2px);
+	transform-origin: center;
+}
+
+
+#menu_nav ul li
+{
+	text-align: center;
+}
+
+#menu_nav ul li a
+{
+	font-size: 1.2rem;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	line-height: 4.5rem;
+}

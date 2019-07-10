@@ -1,0 +1,115 @@
+.button {
+  display: block;
+  border: 1px solid black;
+  font-family: 'Monserrat';
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0.2em;
+  outline: none;
+  background: white;
+  opacity: 0.6;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+  text-align: center;
+}
+.button:hover {
+  opacity: 1;
+}
+@font-face {
+  font-family: 'Bentham';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bentham Regular'), local('Bentham-Regular'), url(https://fonts.gstatic.com/s/bentham/v9/VdGeAZQPEpYfmHglGWsxDA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm45_QpRyS7j.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Beyond';
+  src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
+}
+.collections {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+  .collections {
+    height: 300vh;
+  }
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  .collections {
+    flex-wrap: wrap;
+  }
+}
+.collections_image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh/3);
+}
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+  .collections_image {
+    height: 100vh;
+  }
+}
+#coll_one {
+  background-image: url('../../images/promo_1_.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#coll_two {
+  background-image: url('../../images/promo_2_.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#coll_three {
+  background-image: url('../../images/promo_3_.jpg');
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  #coll_three {
+    height: 100vh;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  #coll_one,
+  #coll_two {
+    height: 50vh;
+    width: 50%;
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../utilities/mixins.less";
+@import "../../utilities/components.less";
+@import "../../utilities/variables.less";
+@import "../../utilities/fonts.less";
+
+.testimonials
+{
+	margin: 0 5%;
+	height: 100vh;
+	display: flex;
+	align-content: center;
+	align-items: center;
+}
+
+.test_text
+{
+	.w(95%);
+	margin: 0 auto;
+	font-family: 'Montserrat', serif;
+	font-weight: lighter;
+	font-size: 4vh;
+	color: #8a8a8a;
+	font-style: italic;
+	.txtAlCent();
+	line-height: 1.25;
+
+	@media only screen and (orientation: landscape) {
+		font-size: 4vw;
+	}
+}
+
+.test_name
+{
+	font-family: 'Bentham', serif;
+	font-weight: lighter;
+	.txtAlCent();
+	font-size: 3.5vh;
+	font-weight: 700;
+	color: #232323;
+	margin-top: 5%;
+
+	@media only screen and (orientation: landscape) {
+		font-size: 3.5vw;
+	}
+}
+

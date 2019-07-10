@@ -1,0 +1,42 @@
+@import "../../utilities/mixins.less";
+@import "../../utilities/components.less";
+@import "../../utilities/variables.less";
+@import "../../utilities/fonts.less";
+
+
+.banner_content {
+
+    margin-top: 15px;
+    
+    h1 {
+        font-size: 13vw;
+        margin-bottom: 10vh;
+
+        @media only screen and (max-height:812px) and (orientation: portrait) {
+            font-size: 25vw;
+        }
+
+        @media only screen and (max-width:812px) and (orientation: landscape) {
+            margin-top: 10vh;
+        }
+
+        @media only screen and (min-width:768px) and (orientation: portrait) {
+            font-size: 20vw;
+        }
+    }
+
+    .button {
+        width: 200px;
+        height: 66px;
+        font-size: 1.25rem;
+        line-height: 66px;
+        margin: 0 auto;
+
+        @media only screen and (min-width:768px) {
+            width: 325px;
+            height: 108px;
+            line-height: 108px;
+            font-size: 1.90rem;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@import "../../utilities/mixins.less";
+@import "../../utilities/components.less";
+@import "../../utilities/variables.less";
+@import "../../utilities/fonts.less";
+
+
+.collections {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	@media only screen and (max-width:1000px) and (orientation: landscape) {
+		height: 300vh;
+	}
+
+	@media only screen and (min-width:1000px) and (orientation: landscape) {
+		flex-wrap: wrap;
+	}
+}
+
+.collections_image
+{
+	.imgbgcent();
+	height: calc(100vh/3);
+
+	@media only screen and (max-width:1000px) and (orientation: landscape) {
+		height: 100vh;
+	}
+}
+
+#coll_one {
+	background-image: url('../../images/promo_1_.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+#coll_two {
+	background-image: url('../../images/promo_2_.jpg');
+	background-size: cover;
+	background-position: center;
+
+}
+
+#coll_three {
+	background-image: url('../../images/promo_3_.jpg');
+	background-size: cover;
+	background-position: center;
+
+	@media only screen and (min-width:1000px) and (orientation: landscape) {
+		height: 100vh;
+		width: 50%;
+	}
+}
+
+#coll_one, #coll_two {
+	@media only screen and (min-width:1000px) and (orientation: landscape) {
+		height: 50vh;
+		width: 50%;
+	}
+}
