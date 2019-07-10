@@ -14,6 +14,7 @@
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
   cursor: pointer;
+  text-align: center;
 }
 .button:hover {
   opacity: 1;
