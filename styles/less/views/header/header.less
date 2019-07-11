@@ -21,13 +21,22 @@
 	-o-transition: all .75s ease;
     transition: all .75s ease;
     
-    @media only screen  and (min-width : 1824px) {
-        height: @header_height + 150px;
-    }
-
 	@media only screen and (max-width: 800px) {
 		height: @header_height_small;
 	}
+
+	@media only screen  and (min-width : 1000px) {
+        height: @header_height + 40px;
+	}
+
+    @media only screen  and (min-width : 1824px) {
+        height: @header_height + 60px;
+	}
+	
+	@media only screen  and (min-width : 3000px) {
+		height: @header_height + 150px;
+	}
+
 }
 
 #header.scrolled

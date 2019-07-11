@@ -17,17 +17,24 @@
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 
-	@media only screen  and (min-width : 1824px) {
-		width: @logo_width + 100px;
-		height: @logo_height + 100px;
-	}
-
 	@media only screen and (max-width: 800px)
 	{
 		width: @logo_width_small;
 		height: @logo_height_small;
 		margin-left: 2.5%;
 	}
+	
+	@media only screen  and (min-width : 1824px) {
+		width: @logo_width + 60px;
+		height: @logo_height + 60px;
+	}
+
+	@media only screen  and (min-width : 3000px) {
+		width: @logo_width + 80px;
+		height: @logo_height + 80px;
+	}
+
+
 }
 
 .main_nav
@@ -66,26 +73,34 @@
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 
+	@media only screen  and (min-width : 1000px) {
+		font-size: 1.5rem;
+	}
+
 	@media only screen  and (min-width : 3200px) {
 		font-size: 3.5rem;
 	}
 
 	@media only screen  and (min-width : 1824px) {
 		font-size: 2rem;
+	}
+	
+	@media only screen  and (min-width : 3000px) {
+		font-size: 3.75rem;
 	}	
 }
 
 .nav_icon {
 	width: 30px;
 	height: 30px;
-
-	@media only screen  and (min-width : 3200px) {
-		width: 55px;
-		height: 55px;
-	}
-
+	
 	@media only screen  and (min-width : 1824px) {
 		width: 45px;
 		height: 45px;
+	}
+
+	@media only screen  and (min-width : 3200px) {
+		width: 60px;
+		height: 60px;
 	}
 }

@@ -62,22 +62,27 @@
   margin-top: 15px;
 }
 .banner_content h1 {
-  font-size: 13vw;
+  font-size: 12vw;
   margin-bottom: 10vh;
 }
-@media only screen and (max-height: 812px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .banner_content h1 {
+    margin-bottom: 20vh;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .banner_content h1 {
+    font-size: 10vw;
+  }
+}
+@media only screen and (height: 812px) and (orientation: portrait) {
   .banner_content h1 {
     font-size: 25vw;
   }
 }
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (width: 812px) and (orientation: landscape) {
   .banner_content h1 {
     margin-top: 10vh;
-  }
-}
-@media only screen and (min-width: 768px) and (orientation: portrait) {
-  .banner_content h1 {
-    font-size: 15vw;
   }
 }
 .banner_content .button {
@@ -85,13 +90,12 @@
   height: 66px;
   font-size: 1.25rem;
   line-height: 66px;
-  margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
   .banner_content .button {
-    width: 325px;
-    height: 108px;
-    line-height: 108px;
-    font-size: 1.9rem;
+    width: 250px;
+    height: 95px;
+    line-height: 105px;
+    font-size: 1.75rem;
   }
 }

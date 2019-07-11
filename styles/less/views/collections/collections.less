@@ -30,22 +30,34 @@
 }
 
 #coll_one {
-	background-image: url('../../images/promo_1_.jpg');
+	background-image: url('../../images/promo_1_xs.jpg');
 	background-size: cover;
 	background-position: center;
+
+	@media only screen (min-width: 500px) {
+		background-image: url('../../images/promo_1_medium.jpg');		
+	}
+
+	@media only screen (min-width: 850px) {
+		background-image: url('../../images/promo_1_.jpg');		
+	}
 }
 
 #coll_two {
-	background-image: url('../../images/promo_2_.jpg');
+	background-image: url('../../images/promo_2.jpg');
 	background-size: cover;
 	background-position: center;
 
 }
 
 #coll_three {
-	background-image: url('../../images/promo_3_.jpg');
+	background-image: url('../../images/promo_3_small.jpg');
 	background-size: cover;
 	background-position: center;
+
+	@media only screen (min-width: 500px) {
+		background-image: url('../../images/promo_3_.jpg');		
+	}
 
 	@media only screen and (min-width:1000px) and (orientation: landscape) {
 		height: 100vh;

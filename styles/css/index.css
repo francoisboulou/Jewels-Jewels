@@ -179,14 +179,24 @@ a:link {
   -o-transition: all 0.75s ease;
   transition: all 0.75s ease;
 }
-@media only screen and (min-width: 1824px) {
-  #header {
-    height: 250px;
-  }
-}
 @media only screen and (max-width: 800px) {
   #header {
     height: 66.66666667px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #header {
+    height: 140px;
+  }
+}
+@media only screen and (min-width: 1824px) {
+  #header {
+    height: 160px;
+  }
+}
+@media only screen and (min-width: 3000px) {
+  #header {
+    height: 250px;
   }
 }
 #header.scrolled {
@@ -209,17 +219,23 @@ a:link {
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
 }
-@media only screen and (min-width: 1824px) {
-  #nav_logo_img {
-    width: 165px;
-    height: 165px;
-  }
-}
 @media only screen and (max-width: 800px) {
   #nav_logo_img {
     width: 43.33333333px;
     height: 43.33333333px;
     margin-left: 2.5%;
+  }
+}
+@media only screen and (min-width: 1824px) {
+  #nav_logo_img {
+    width: 125px;
+    height: 125px;
+  }
+}
+@media only screen and (min-width: 3000px) {
+  #nav_logo_img {
+    width: 145px;
+    height: 145px;
   }
 }
 .main_nav {
@@ -253,6 +269,11 @@ a:link {
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
 }
+@media only screen and (min-width: 1000px) {
+  .main_nav ul li a {
+    font-size: 1.5rem;
+  }
+}
 @media only screen and (min-width: 3200px) {
   .main_nav ul li a {
     font-size: 3.5rem;
@@ -263,20 +284,25 @@ a:link {
     font-size: 2rem;
   }
 }
+@media only screen and (min-width: 3000px) {
+  .main_nav ul li a {
+    font-size: 3.75rem;
+  }
+}
 .nav_icon {
   width: 30px;
   height: 30px;
-}
-@media only screen and (min-width: 3200px) {
-  .nav_icon {
-    width: 55px;
-    height: 55px;
-  }
 }
 @media only screen and (min-width: 1824px) {
   .nav_icon {
     width: 45px;
     height: 45px;
+  }
+}
+@media only screen and (min-width: 3200px) {
+  .nav_icon {
+    width: 60px;
+    height: 60px;
   }
 }
 #burger_button {
@@ -504,9 +530,17 @@ footer {
 .banner_content {
   margin-top: 15px;
 }
-.banner_content h1 {
-  font-size: 12vw;
-  margin-bottom: 10vh;
+@media only screen and (orientation: portrait) {
+  .banner_content h1 {
+    font-size: 20vw;
+    margin-bottom: 13vh;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .banner_content h1 {
+    font-size: 13vw;
+    margin-bottom: 13vh;
+  }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .banner_content h1 {
@@ -520,27 +554,51 @@ footer {
 }
 @media only screen and (height: 812px) and (orientation: portrait) {
   .banner_content h1 {
-    font-size: 25vw;
+    font-size: 20vw;
   }
 }
 @media only screen and (width: 812px) and (orientation: landscape) {
   .banner_content h1 {
-    margin-top: 10vh;
+    margin-top: 13vh;
   }
 }
 .banner_content .button {
-  width: 200px;
-  height: 66px;
+  width: 175px;
+  height: 65px;
   font-size: 1.25rem;
   line-height: 66px;
   margin: 0 auto;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (orientation: portrait) {
   .banner_content .button {
-    width: 250px;
-    height: 95px;
-    line-height: 105px;
+    width: 275px;
+    height: 110px;
+    line-height: 110px;
     font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+  .banner_content .button {
+    width: 285px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 3000px) and (orientation: landscape) {
+  .banner_content .button {
+    width: 525px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 7000px) and (orientation: landscape) {
+  .banner_content .button {
+    width: 1250px;
+    height: 450px;
+    line-height: 450px;
+    font-size: 8.5rem;
   }
 }
 .collections {
@@ -571,19 +629,34 @@ footer {
   }
 }
 #coll_one {
-  background-image: url('../../images/promo_1_.jpg');
+  background-image: url('../../images/promo_1_xs.jpg');
   background-size: cover;
   background-position: center;
 }
+@media only screen (min-width: 500px) {
+  #coll_one {
+    background-image: url('../../images/promo_1_medium.jpg');
+  }
+}
+@media only screen (min-width: 850px) {
+  #coll_one {
+    background-image: url('../../images/promo_1_.jpg');
+  }
+}
 #coll_two {
-  background-image: url('../../images/promo_2_.jpg');
+  background-image: url('../../images/promo_2.jpg');
   background-size: cover;
   background-position: center;
 }
 #coll_three {
-  background-image: url('../../images/promo_3_.jpg');
+  background-image: url('../../images/promo_3_small.jpg');
   background-size: cover;
   background-position: center;
+}
+@media only screen (min-width: 500px) {
+  #coll_three {
+    background-image: url('../../images/promo_3_.jpg');
+  }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   #coll_three {
@@ -606,6 +679,21 @@ footer {
   flex-direction: column;
   width: 100%;
   height: 300vh;
+  margin: 5% 0;
+}
+@media only screen and (min-height: 812px) and (orientation: portrait) {
+  .arrivals {
+    height: 240vh;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .arrivals {
+    width: 95%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+  }
 }
 .product {
   height: 100vh;
@@ -615,6 +703,11 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (min-height: 812px) and (orientation: portrait) {
+  .product {
+    height: 80vh;
+  }
+}
 .product_image {
   width: 45vh;
 }
@@ -623,16 +716,31 @@ footer {
     width: 60vh;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .product_image {
+    width: 25vw;
+  }
+}
 .product_info {
   font-size: 3.5vh;
   font-family: 'Montserrat', sans-serif;
   color: black;
   text-align: center;
-  margin-top: 5px;
+}
+@media only screen and (orientation: portrait) {
+  .product_info {
+    width: 80vw;
+  }
 }
 @media only screen and (orientation: landscape) {
   .product_info {
     font-size: 3.5vw;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .product_info {
+    width: 22vw;
+    font-size: 2.5vh;
   }
 }
 .product_info p {
@@ -643,10 +751,11 @@ footer {
   background-image: url("../../images/extra_2_vert_.jpg");
   background-size: 100% auto;
   background-position: top;
+  background-repeat: no-repeat;
   border: 1.5px solid black;
   width: 95%;
   height: 95vh;
-  margin: 0 auto;
+  margin: 7% auto;
   box-sizing: border-box;
   padding: 5% 5%;
   display: flex;
@@ -658,7 +767,6 @@ footer {
   .offer {
     background-image: url("../../images/extra_2_hor.jpg");
     background-position: center;
-    background-repeat: no-repeat;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -681,6 +789,11 @@ footer {
     line-height: 1.25;
   }
 }
+@media only screen and (width: 812px) and (orientation: landscape) {
+  .offer p {
+    margin-bottom: 5%;
+  }
+}
 .offer .button {
   margin-bottom: 7%;
   border: 2px solid black;
@@ -697,6 +810,11 @@ footer {
 @media only screen and (min-width: 700px) {
   .offer .button {
     font-size: 3vw;
+  }
+}
+@media only screen and (width: 812px) and (orientation: landscape) {
+  .offer .button {
+    margin-bottom: 12%;
   }
 }
 @media only screen and (min-width: 959px) {
@@ -757,6 +875,11 @@ footer {
     font-size: 4vw;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .test_text {
+    font-size: 2.7vw;
+  }
+}
 .test_name {
   font-family: 'Bentham', serif;
   font-weight: lighter;
@@ -794,5 +917,43 @@ footer {
   background-color: black;
 }
 #instafeed .instaimg img {
-  width: 100vw;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+@media only screen and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 60vw;
+    height: auto;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+}
+@media only screen and (min-width: 600px) and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
+}
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 40vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+  }
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 56vw;
+    margin-left: 22vw;
+    margin-right: 22vw;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 44vw;
+    margin-left: 28vw;
+    margin-right: 28vw;
+  }
 }

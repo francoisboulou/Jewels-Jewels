@@ -10,10 +10,11 @@
 	background-image:url("../../images/extra_2_vert_.jpg");
 	background-size: 100% auto;
 	background-position: top;
+	background-repeat: no-repeat;	
 	border: 1.5px solid black;
 	width: 95%;
 	height: 95vh;
-	margin: 0 auto;
+	margin: 7% auto;
 	box-sizing: border-box;
 	padding: 5% 5%;
 	display: flex;
@@ -24,7 +25,6 @@
 	@media only screen and (orientation: landscape) {
 		background-image:url("../../images/extra_2_hor.jpg");
 		background-position: center;
-		background-repeat: no-repeat;	
 	}
 
 	@media only screen and (min-width: 1000px) {
@@ -43,6 +43,10 @@
 		@media only screen and (orientation: landscape) {
 			font-size: 17vh;
 			line-height: 1.25;
+		}
+
+		@media only screen and (width: 812px) and (orientation: landscape) {
+			margin-bottom: 5%;
 		}
 	}
 }
@@ -65,6 +69,11 @@
 	@media only screen and (min-width: 700px) {
 		font-size: 3vw;
 	}
+
+	@media only screen and (width: 812px) and (orientation: landscape) {
+		margin-bottom: 12%;
+	}
+
 	
 	@media only screen and (min-width: 959px) {
 		width: 300px;

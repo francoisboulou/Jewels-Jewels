@@ -3,13 +3,6 @@
 @import "../../utilities/variables.less";
 @import "../../utilities/fonts.less";
 
-
-// #instaCont {
-// 	// background: black;
-// 	// position: relative;
-// 	// border: 2px solid red;
-// }
-
 .arrow {
 	font-size: 2rem;
 	position: absolute;
@@ -29,40 +22,55 @@
 
 
 #instafeed {
-	// position: relative;
 	height: 100vh;
-	// background: black;
 	display: flex;
 	align-items: center;
-	// flex-direction: column;
-	// flex-wrap: wrap;
 	width: 100vw;
 	overflow: hidden;
-	// border: 2px solid yellow;
 	background-color: black;
 	
 	.instaimg {
-		// position: relative;
-		// left: 0;
-		// width: 100vw;
-		// height: 50%; 
-		// text-align: center;
-		// display: flex;
-		// justify-content: center;
-		// align-items: center;
-		// transition: left 1s;
-		// border: 2px solid blue;
-		// display: inline-block;
-
-		a {
-			
-
-
-		}
 
 		img {
-			width: 100vw;
-			// margin: auto 0;
+			width: 90vw;
+			margin-left: 5vw;
+			margin-right: 5vw;
+
+			@media only screen and (orientation: landscape) {
+				width: 60vw;
+				height: auto;
+				margin-left: 20vw;
+				margin-right: 20vw;
+			}
+
+			@media only screen and (min-width: 600px) and (orientation: landscape) {
+				width: 50vw;
+
+				margin-left: 25vw;
+				margin-right: 25vw;
+			}
+
+			@media only screen and (min-width: 800px) and (orientation: landscape) {
+				width: 40vw;
+
+				margin-left: 30vw;
+				margin-right: 30vw;
+			}
+
+			@media only screen and (min-width: 1000px) and (orientation: landscape) {
+				width: 56vw;
+
+				margin-left: 22vw;
+				margin-right: 22vw;
+			}
+
+			@media only screen and (min-width: 1200px) and (orientation: landscape) {
+				width: 44vw;
+
+				margin-left: 28vw;
+				margin-right: 28vw;
+			}
+
 		}
 	}
 }
