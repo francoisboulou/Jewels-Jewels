@@ -20,69 +20,25 @@
   opacity: 1;
 }
 @font-face {
-  font-family: 'Bentham';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Bentham Regular'), local('Bentham-Regular'), url(https://fonts.gstatic.com/s/bentham/v9/VdGeAZQPEpYfmHglGWsxDA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm45_QpRyS7j.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Beyond';
   src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
 }
-#social {
-  width: 15%;
-  margin: 15px auto 0 auto;
+.social {
+  margin: 5vw 0;
+  width: 25%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
 }
-@media only screen and (max-width: 767px) {
-  #social {
-    width: 80%;
-  }
+.social li a i {
+  font-size: 7vw;
+  margin: 0 3vw;
+  color: black;
 }
-#social li a i {
-  font-size: 24px;
-  color: #937c6f;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-@media only screen and (max-width: 400px) {
-  #social li a i {
-    font-size: 18px;
+@media only screen and (orientation: landscape) {
+  .social li a i {
+    font-size: 7vh;
   }
 }

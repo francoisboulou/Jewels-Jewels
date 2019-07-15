@@ -20,41 +20,6 @@
   opacity: 1;
 }
 @font-face {
-  font-family: 'Bentham';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Bentham Regular'), local('Bentham-Regular'), url(https://fonts.gstatic.com/s/bentham/v9/VdGeAZQPEpYfmHglGWsxDA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm45_QpRyS7j.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Beyond';
   src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
 }
@@ -74,14 +39,24 @@
   -o-transition: all 0.75s ease;
   transition: all 0.75s ease;
 }
-@media only screen and (min-width: 1824px) {
-  #header {
-    height: 250px;
-  }
-}
 @media only screen and (max-width: 800px) {
   #header {
     height: 66.66666667px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #header {
+    height: 140px;
+  }
+}
+@media only screen and (min-width: 1824px) {
+  #header {
+    height: 160px;
+  }
+}
+@media only screen and (min-width: 3000px) {
+  #header {
+    height: 250px;
   }
 }
 #header.scrolled {

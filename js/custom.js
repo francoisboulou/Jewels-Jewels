@@ -1,45 +1,42 @@
-/* JS Document */
-
-/******************************
-
-[Table of Contents]
-
-1. Vars and Inits
-2. Set Header
-3. Init Menu
-4. Init Home Slider
-5. Init Gallery
-6. Init Testimonials Slider
-7. Init Lightbox
-
-
-******************************/
-
 
 $(document).ready(function()
 {
 	"use strict";
 
-	/*
+	// Disappearing header vars
 
-	1. Vars and Inits
-
-	*/
-
-	const arrowTwo = document.getElementById('instarrow2')
-	
 	let header = document.getElementById('header');
 	let menuActive = false;
 	let menu = document.getElementById('menu');
 	let burger = document.getElementById('burger_button');
 	
-	const arrowOne = document.getElementById('instarrow1')
-	let instaImgs = document.getElementsByClassName('instaimg')
+
+	// Instafeed vars
+	
+	// 
 	let leftPos = 0;
+	let instaImgs = document.getElementsByClassName('instaimg');
+	const gallLeft = document.getElementById("gall_left");
+	const gallRight = document.getElementById("gall_right");
+	
 
+	// Instafeed div
+
+	var userFeed = new Instafeed({
+        get: 'user',
+        userId: '15533227278',
+        limit: 12,
+        resolution: 'standard_resolution',
+        accessToken: '15533227278.1677ed0.d4fe0f36ca7c48b8ad1e753f197976f4',
+        sortBy: 'most-recent',
+        template: '<div class="col-lg-3 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
+	});
+
+
+	// Instafeed arrow behavior
+	
 	function instaScroll() {
-
-		if (event.target === arrowOne) {
+		if (event.target === gallRight) {
 			if (leftPos <= -(instaImgs.length * 100)) {
 				console.log('no more scrolling');
 				return
@@ -63,14 +60,12 @@ $(document).ready(function()
 		}	
 	}	
 	
-	
-	// arrowOne.addEventListener('click', instaScroll);
-	// arrowTwo.addEventListener('click', instaScroll);
+	gallLeft.addEventListener('click', instaScroll);
+	gallRight.addEventListener('click', instaScroll);
 		
+	
+	// Disappearing Header
 
-	/*
-	2. Set Header
-	*/
 	var prevScrollpos = window.pageYOffset;
 
 	function setHeader() {
@@ -96,9 +91,7 @@ $(document).ready(function()
 	}
 
 
-	/*
-	3. Init Menu
-	*/
+	// Mobile Menu
 
 	function openMenu()
 	{
@@ -146,11 +139,7 @@ $(document).ready(function()
 	}
 
 
-
-
-	/*
-	6. Init Testimonials Slider
-	*/
+	// Testimonials Slider
 
 	function initTestSlider()
 	{
@@ -169,140 +158,26 @@ $(document).ready(function()
 		}
 	}
 
-// Instafeed
 
-	var userFeed = new Instafeed({
-        get: 'user',
-        userId: '15533227278',
-        limit: 12,
-        resolution: 'standard_resolution',
-        accessToken: '15533227278.1677ed0.d4fe0f36ca7c48b8ad1e753f197976f4',
-        sortBy: 'most-recent',
-        template: '<div class="col-lg-3 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
-	});
-	
-
-//NiCe ScRoLl//	
-	function niceScroll() {
-
-		const homeTop = (document.getElementById('banner').getBoundingClientRect()).top;
-		const collTop = (document.getElementById('collections').getBoundingClientRect()).top;
-		const arrivTop = (document.getElementById('arrivals').getBoundingClientRect()).top;
-		const extTop = (document.getElementById('extra').getBoundingClientRect()).top;
-		const testTop = (document.getElementById('testimonials').getBoundingClientRect()).top;
-		const igTop = (document.getElementById('instafeed').getBoundingClientRect()).top;
-
-		const throttle = (func, limit) => {
-			let inThrottle
-			return function() {
-			const args = arguments
-			const context = this
-			if (!inThrottle) {
-				func.apply(context, args)
-				inThrottle = true
-				setTimeout(() => inThrottle = false, limit)
-			}
-			}
-		}
-
-		let scrollPos = 0;
-		
-		window.addEventListener('scroll', throttle(function() {
-			if ((document.body.getBoundingClientRect()).top > scrollPos) {
-				if (pageYOffset > igTop) {
-					window.scrollTo({
-						top: igTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset > testTop) {
-					window.scrollTo({
-						top: testTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset > extTop) {
-					window.scrollTo({
-						top: extTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset > arrivTop) {
-					window.scrollTo({
-						top: arrivTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset > collTop) {
-					window.scrollTo({
-						top: collTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset > homeTop) {
-					window.scrollTo({
-						top: homeTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				}
-			} else {
-				if (pageYOffset < collTop) {
-					window.scrollTo({
-						top: collTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset < arrivTop) {
-					window.scrollTo({
-						top: arrivTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset < extTop) {
-					window.scrollTo({
-						top: extTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset < testTop) {
-					window.scrollTo({
-						top: testTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} else if (pageYOffset < igTop) {
-					window.scrollTo({
-						top: igTop,
-						left: 0,
-						behavior: 'smooth',
-					})
-				} 
-			}	
-			scrollPos = (document.body.getBoundingClientRect()).top;
-		}, 2000))
-	}
+	// Add hover effect to featured product images when not mobile.
 
 	function isMobile() {
 		try{ document.createEvent("TouchEvent"); return true; }
 		catch(e){ return false; }
-	  }
+		}
 
 	function onHoverAdd() {
-		if (isMobile()) {
-			$(".overlay").hover(function(){
-				$(this).css("background-color", "yellow");
-				}, function(){
-				$(this).css("background-color", "pink");
-			  });
+		if (isMobile() === false) {
+			$(".product_image").hover(function(){
+				$(this).css("transform", "scale(1.1)");
+				}, function() {
+				$(this).css("transform", "scale(1)");
+				});
 		}
-	}  
+	}
 
-	// instaScroll();
 	userFeed.run();
-	// niceScroll();
 	onHoverAdd();
 	initMenu();
 	initTestSlider();
-
 });

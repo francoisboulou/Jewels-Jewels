@@ -20,41 +20,6 @@
   opacity: 1;
 }
 @font-face {
-  font-family: 'Bentham';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Bentham Regular'), local('Bentham-Regular'), url(https://fonts.gstatic.com/s/bentham/v9/VdGeAZQPEpYfmHglGWsxDA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm45_QpRyS7j.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Beyond';
   src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
 }
@@ -81,5 +46,43 @@
   background-color: black;
 }
 #instafeed .instaimg img {
-  width: 100vw;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+@media only screen and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 60vw;
+    height: auto;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+}
+@media only screen and (min-width: 600px) and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
+}
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 40vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+  }
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 56vw;
+    margin-left: 22vw;
+    margin-right: 22vw;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+  #instafeed .instaimg img {
+    width: 44vw;
+    margin-left: 28vw;
+    margin-right: 28vw;
+  }
 }

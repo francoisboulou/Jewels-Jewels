@@ -3,37 +3,10 @@
 @import "../../utilities/variables.less";
 @import "../../utilities/fonts.less";
 
-
-
 footer
 {
 	height: 100vh;
 	.flex(@dir: column, @wrap: nowrap, @al: center, @jus: space-around,);
-	// border: 2px solid red;
-}
-
-.footer_nav {
-	.flex(@dir: column, @wrap: nowrap, @al: center, @jus: end,);
-	text-align: center;
-	.w(100%);
-	margin-bottom: 4%;
-
-	a {
-		font-size: 3.5rem;
-		color: #232323;
-		margin-bottom: 2%;
-		// border: 2px solid red;
-	
-	  @media only screen and (max-width: 768px)
-	  {
-		  font-size: 2.5rem;
-	  }
-	
-	  @media only screen and (max-width: 575px)
-	  {
-		font-size: 1.65rem;
-	  }
-	}
 }
 
 .copyright {
@@ -43,4 +16,15 @@ footer
 	font-weight: lighter;
 	font-size: .5rem;
 	color: #232323;
+}
+
+.footer_logo {
+	margin: 0;
+	width: 25vw;
+	height: 25vw;
+
+	@media only screen and (orientation: landscape) {
+		width: 25vh;
+		height: 25vh;
+	}
 }

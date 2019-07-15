@@ -20,41 +20,6 @@
   opacity: 1;
 }
 @font-face {
-  font-family: 'Bentham';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Bentham Regular'), local('Bentham-Regular'), url(https://fonts.gstatic.com/s/bentham/v9/VdGeAZQPEpYfmHglGWsxDA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm45_QpRyS7j.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Beyond';
   src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
 }
@@ -63,10 +28,11 @@
   background-image: url("../../images/extra_2_vert_.jpg");
   background-size: 100% auto;
   background-position: top;
+  background-repeat: no-repeat;
   border: 1.5px solid black;
   width: 95%;
   height: 95vh;
-  margin: 0 auto;
+  margin: 7% auto;
   box-sizing: border-box;
   padding: 5% 5%;
   display: flex;
@@ -78,7 +44,6 @@
   .offer {
     background-image: url("../../images/extra_2_hor.jpg");
     background-position: center;
-    background-repeat: no-repeat;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -101,6 +66,11 @@
     line-height: 1.25;
   }
 }
+@media only screen and (width: 812px) and (orientation: landscape) {
+  .offer p {
+    margin-bottom: 5%;
+  }
+}
 .offer .button {
   margin-bottom: 7%;
   border: 2px solid black;
@@ -117,6 +87,11 @@
 @media only screen and (min-width: 700px) {
   .offer .button {
     font-size: 3vw;
+  }
+}
+@media only screen and (width: 812px) and (orientation: landscape) {
+  .offer .button {
+    margin-bottom: 12%;
   }
 }
 @media only screen and (min-width: 959px) {

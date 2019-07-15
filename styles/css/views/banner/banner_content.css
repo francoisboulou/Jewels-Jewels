@@ -20,50 +20,23 @@
   opacity: 1;
 }
 @font-face {
-  font-family: 'Bentham';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Bentham Regular'), local('Bentham-Regular'), url(https://fonts.gstatic.com/s/bentham/v9/VdGeAZQPEpYfmHglGWsxDA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm45_QpRyS7j.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Beyond';
   src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
 }
 .banner_content {
   margin-top: 15px;
 }
-.banner_content h1 {
-  font-size: 12vw;
-  margin-bottom: 10vh;
+@media only screen and (orientation: portrait) {
+  .banner_content h1 {
+    font-size: 20vw;
+    margin-bottom: 13vh;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .banner_content h1 {
+    font-size: 13vw;
+    margin-bottom: 13vh;
+  }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .banner_content h1 {
@@ -77,25 +50,50 @@
 }
 @media only screen and (height: 812px) and (orientation: portrait) {
   .banner_content h1 {
-    font-size: 25vw;
+    font-size: 20vw;
   }
 }
 @media only screen and (width: 812px) and (orientation: landscape) {
   .banner_content h1 {
-    margin-top: 10vh;
+    margin-top: 13vh;
   }
 }
 .banner_content .button {
-  width: 200px;
-  height: 66px;
+  width: 175px;
+  height: 65px;
   font-size: 1.25rem;
   line-height: 66px;
+  margin: 0 auto;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (orientation: portrait) {
   .banner_content .button {
-    width: 250px;
-    height: 95px;
-    line-height: 105px;
+    width: 275px;
+    height: 110px;
+    line-height: 110px;
     font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+  .banner_content .button {
+    width: 285px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 3000px) and (orientation: landscape) {
+  .banner_content .button {
+    width: 525px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 7000px) and (orientation: landscape) {
+  .banner_content .button {
+    width: 1250px;
+    height: 450px;
+    line-height: 450px;
+    font-size: 8.5rem;
   }
 }

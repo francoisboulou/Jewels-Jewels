@@ -3,26 +3,20 @@
 @import "../../utilities/variables.less";
 @import "../../utilities/fonts.less";
 
-#nav_logo_img
+.nav_logo_img
 {
 	background-image: url("../../images/logo.png");
-	// .test(red);
 	margin-left: 5%;
 	background-size: 100%;
+	background-repeat: no-repeat;
 	width: @logo_width;
 	height: @logo_height;
+	// border: 2px solid red;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
-
-	@media only screen and (max-width: 800px)
-	{
-		width: @logo_width_small;
-		height: @logo_height_small;
-		margin-left: 2.5%;
-	}
 	
 	@media only screen  and (min-width : 1824px) {
 		width: @logo_width + 60px;
@@ -33,11 +27,9 @@
 		width: @logo_width + 80px;
 		height: @logo_height + 80px;
 	}
-
-
 }
 
-.main_nav
+.nav
 {
   width: 50%;
   margin-right: 5%;  
@@ -53,14 +45,14 @@
 	}
 }
 
-.main_nav ul
+.nav ul
 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.main_nav ul li a
+.nav ul li a
 {
 	font-size: 1rem;
 	font-family: 'Montserrat', sans-serif;
@@ -103,4 +95,22 @@
 		width: 60px;
 		height: 60px;
 	}
+}
+
+.footer_nav {
+	// border: 2px solid red;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@media only screen and (orientation: landscape) {
+		flex-direction: row;
+		width: 60%;
+		justify-content: space-around;
+		margin-top: 5vh;
+
+	}	
 }

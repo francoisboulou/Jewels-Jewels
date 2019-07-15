@@ -20,41 +20,6 @@
   opacity: 1;
 }
 @font-face {
-  font-family: 'Bentham';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Bentham Regular'), local('Bentham-Regular'), url(https://fonts.gstatic.com/s/bentham/v9/VdGeAZQPEpYfmHglGWsxDA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm45_QpRyS7j.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_aZA3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Beyond';
   src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
 }
@@ -86,19 +51,34 @@
   }
 }
 #coll_one {
-  background-image: url('../../images/promo_1_.jpg');
+  background-image: url('../../images/promo_1_xs.jpg');
   background-size: cover;
   background-position: center;
 }
+@media only screen (min-width: 500px) {
+  #coll_one {
+    background-image: url('../../images/promo_1_medium.jpg');
+  }
+}
+@media only screen (min-width: 850px) {
+  #coll_one {
+    background-image: url('../../images/promo_1_.jpg');
+  }
+}
 #coll_two {
-  background-image: url('../../images/promo_2_.jpg');
+  background-image: url('../../images/promo_2.jpg');
   background-size: cover;
   background-position: center;
 }
 #coll_three {
-  background-image: url('../../images/promo_3_.jpg');
+  background-image: url('../../images/promo_3_small.jpg');
   background-size: cover;
   background-position: center;
+}
+@media only screen (min-width: 500px) {
+  #coll_three {
+    background-image: url('../../images/promo_3_.jpg');
+  }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   #coll_three {

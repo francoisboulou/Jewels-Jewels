@@ -5,59 +5,60 @@
 
 
 .newsletter {
-    width: 50%;
-    // border: 2px solid red;
+    margin-top: 10%;
     text-align: center;
     align-self: center;
-    // border: 2px solid red;
-
-    @media only screen and (max-width: 959px) {
-        width: 75%;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1 {
-        // border: 2px solid red;
-        font-size: 3.37rem;
+        font-size: 10vw;
         margin-bottom: 2.5%;
 
-        @media only screen and (max-width: 959px) {
-            font-size: 2.5rem;
-            margin-bottom: 4%;
+         @media only screen and (orientation: landscape) {
+            font-size: 9.5vh;
+        }
 
+        @media only screen and (min-width: 1000px) and (orientation: portrait) {
+            font-size: 6.5vw;
         }
     }
 
     form {
-        width: 100%;
-        display: inline-flex;
-
-        @media only screen and (max-width: 959px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        width: 90%;
     }
 
     input.newsletter_input {
-        width: calc(100% - 191px);
-        height: 65px;
+        width: 100%;
+        height: 8vh;
         border: 1px solid black;
         box-sizing: border-box;
-        border-right: none;
 
-        @media only screen and (max-width: 959px) {
-            height: 35px;
-            width: 100%;
-            border-right: 1px solid black;
-            border-bottom: none;
+        @media only screen and (orientation: landscape) {
+            height: 10vh;    
         }
     }
 
+    input[type="email"]::placeholder {
+        text-align: center;
+        font-size: 2vw;
+        line-height: 2vw;
+        vertical-align: middle;
+    }
+
     .button {
-        @media only screen and (max-width: 959px) {
-            height: 35px;
-            line-height: 35px;
-            width: 100%;
+        width: 100%;
+        height: 7vh;
+        margin-top: 1.5vh;
+        font-size: 3vw;
+
+        @media only screen and (orientation: landscape) {
+            height: 10vh;    
+        }
+
+        @media only screen and (min-width: 1000px) {
+            font-size: 2.5vw;    
         }
     }
 }
