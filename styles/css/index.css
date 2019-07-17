@@ -563,68 +563,58 @@ footer {
   flex-direction: column;
   height: 100vh;
 }
-@media only screen and (max-width: 1000px) and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
   .collections {
     height: 300vh;
   }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   .collections {
+    height: 100vh;
     flex-wrap: wrap;
   }
 }
-.collections_image {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+#collection_one,
+#collection_two,
+#collection_three {
+  width: 100%;
   height: calc(100vh/3);
 }
-@media only screen and (max-width: 1000px) and (orientation: landscape) {
-  .collections_image {
+@media only screen and (orientation: landscape) {
+  #collection_one,
+  #collection_two,
+  #collection_three {
     height: 100vh;
   }
 }
-#coll_one {
-  background-image: url('../../images/promo_1_xs.jpg');
-  background-size: cover;
-  background-position: center;
-}
-@media only screen (min-width: 500px) {
-  #coll_one {
-    background-image: url('../../images/promo_1_medium.jpg');
-  }
-}
-@media only screen (min-width: 850px) {
-  #coll_one {
-    background-image: url('../../images/promo_1_.jpg');
-  }
-}
-#coll_two {
-  background-image: url('../../images/promo_2.jpg');
-  background-size: cover;
-  background-position: center;
-}
-#coll_three {
-  background-image: url('../../images/promo_3_small.jpg');
-  background-size: cover;
-  background-position: center;
-}
-@media only screen (min-width: 500px) {
-  #coll_three {
-    background-image: url('../../images/promo_3_.jpg');
-  }
+#collection_one img,
+#collection_two img,
+#collection_three img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
-  #coll_three {
-    height: 100vh;
+  #collection_one {
     width: 50%;
   }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
-  #coll_one,
-  #coll_two {
+  #collection_one img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  #collection_two,
+  #collection_three {
+    width: 50%;
     height: 50vh;
-    width: 50%;
+  }
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  #collection_two img,
+  #collection_three img {
+    width: 100%;
   }
 }
 .arrivals {

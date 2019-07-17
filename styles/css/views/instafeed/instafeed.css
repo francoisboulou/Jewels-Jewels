@@ -23,27 +23,59 @@
   font-family: 'Beyond';
   src: url('../../fonts/beyond_the_mountains.otf') format('opentype'), url('../../fonts/beyond_the_mountains.ttf') format('truetype');
 }
-.arrow {
-  font-size: 2rem;
+.insta_cont {
+  position: relative;
+  width: 100%;
+}
+.arrow_cont {
   position: absolute;
+  bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
-#instarrow1 {
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+@media only screen and (orientation: landscape) {
+  .arrow_cont {
+    justify-content: space-between;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
+  }
 }
-#instarrow2 {
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+@media only screen and (min-width: 700px) {
+  .arrow_cont {
+    bottom: 6%;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .arrow_cont {
+    bottom: 50%;
+  }
+}
+#gall_right,
+#gall_left {
+  color: white;
+  font-size: 5vh;
+}
+@media only screen and (orientation: landscape) {
+  #gall_right,
+  #gall_left {
+    font-size: 5vw;
+  }
 }
 #instafeed {
   height: 100vh;
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   background-color: black;
+}
+#instafeed .instaimg {
+  position: relative;
+  left: 0;
+  transition: left 1s;
 }
 #instafeed .instaimg img {
   width: 90vw;

@@ -10,64 +10,55 @@
 	flex-direction: column;
 	height: 100vh;
 
-	@media only screen and (max-width:1000px) and (orientation: landscape) {
+	@media only screen and (orientation: landscape) {
 		height: 300vh;
 	}
 
 	@media only screen and (min-width:1000px) and (orientation: landscape) {
+		height: 100vh;
 		flex-wrap: wrap;
 	}
 }
 
-.collections_image
-{
-	.imgbgcent();
+#collection_one, #collection_two, #collection_three {
+	width: 100%;
 	height: calc(100vh/3);
 
-	@media only screen and (max-width:1000px) and (orientation: landscape) {
+	@media only screen and (orientation: landscape) {
 		height: 100vh;
 	}
-}
 
-#coll_one {
-	background-image: url('../../images/promo_1_xs.jpg');
-	background-size: cover;
-	background-position: center;
-
-	@media only screen (min-width: 500px) {
-		background-image: url('../../images/promo_1_medium.jpg');		
-	}
-
-	@media only screen (min-width: 850px) {
-		background-image: url('../../images/promo_1_.jpg');		
+	img {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
 	}
 }
 
-#coll_two {
-	background-image: url('../../images/promo_2.jpg');
-	background-size: cover;
-	background-position: center;
-
-}
-
-#coll_three {
-	background-image: url('../../images/promo_3_small.jpg');
-	background-size: cover;
-	background-position: center;
-
-	@media only screen (min-width: 500px) {
-		background-image: url('../../images/promo_3_.jpg');		
-	}
-
+#collection_one {
 	@media only screen and (min-width:1000px) and (orientation: landscape) {
-		height: 100vh;
 		width: 50%;
 	}
+
+	img {
+		@media only screen and (min-width:1000px) and (orientation: landscape) {
+			width: 100%;
+		}
+	}
 }
 
-#coll_one, #coll_two {
+#collection_two, #collection_three {
 	@media only screen and (min-width:1000px) and (orientation: landscape) {
+		width: 50%;
 		height: 50vh;
-		width: 50%;
+	}
+
+	img {
+		@media only screen and (min-width:1000px) and (orientation: landscape) {
+			width: 100%;
+		}
 	}
 }
+
+
+
