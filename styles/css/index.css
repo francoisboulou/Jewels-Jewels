@@ -173,10 +173,7 @@ a:link {
   }
 }
 .nav_logo_img {
-  background-image: url("../../images/logo.png");
   margin-left: 5%;
-  background-size: 100%;
-  background-repeat: no-repeat;
   width: 65px;
   height: 65px;
   -webkit-transition: all 200ms ease;
@@ -196,6 +193,9 @@ a:link {
     width: 145px;
     height: 145px;
   }
+}
+.nav_logo_img img {
+  width: inherit;
 }
 .nav {
   width: 50%;

@@ -5,10 +5,8 @@
 
 .nav_logo_img
 {
-	background-image: url("../../images/logo.png");
+	
 	margin-left: 5%;
-	background-size: 100%;
-	background-repeat: no-repeat;
 	width: @logo_width;
 	height: @logo_height;
 	// border: 2px solid red;
@@ -26,6 +24,10 @@
 	@media only screen  and (min-width : 3000px) {
 		width: @logo_width + 80px;
 		height: @logo_height + 80px;
+	}
+
+	img {
+		width: inherit;
 	}
 }
 
