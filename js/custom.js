@@ -2,6 +2,9 @@ $(document).ready(function()
 {
 	"use strict";
 
+
+	
+
 	// Disappearing header vars
 
 	let header = document.getElementById('header');
@@ -12,7 +15,6 @@ $(document).ready(function()
 
 	// Instafeed vars
 	
-	// 
 	let leftPos = 0;
 	let instaImgs = document.getElementsByClassName('instaimg');
 	const gallLeft = document.getElementById("gall_left");
@@ -31,6 +33,16 @@ $(document).ready(function()
         template: '<div class="col-lg-3 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
 	});
 
+	// Adding Aria label to instaimgs
+
+	window.onload = function() {
+		for (let i = 0; i < instaImgs.length; i++) {
+			let img = instaImgs[i].querySelector("a");
+			img.setAttribute('aria-label', 'instagram image');
+			console.log("set attribute" + i);
+		}
+	};
+	
 
 	// Instafeed arrow behavior
 	
@@ -177,6 +189,7 @@ $(document).ready(function()
 
 	userFeed.run();
 	onHoverAdd();
+	// addAria();
 	initMenu();
 	initTestSlider();
 });
