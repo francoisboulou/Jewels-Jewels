@@ -13,4 +13,4 @@ a few concepts in it with every project. The main ideas/technologies covered in 
 * Animations
 * CSS Preprocessing (LESS)
 * DOM manipulation (JS/JQuery)
-* Productivity Libraries (Instafeed, Owl Carousel) 
+* Plugins/Libraries (Instafeed, Owl Carousel) 
