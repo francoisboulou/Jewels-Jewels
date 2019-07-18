@@ -17,6 +17,7 @@ a few concepts in it with every project. The main ideas/technologies covered in 
 
 # Some Things I Did on This Project
 
+* Used Aria and NVDA screen reader to create a comfortable experience for non-sighted individuals
 * Used native, semantic HTML tags whenever possible to increase screen reader compatibility
 * Used JS and Jquery to dynamically add classes, control scroll behavior, and include navigable, automatically updating instagram gallery
 * Used media queries to create an easy to use layout on screen sizes ranging from the iPhone 4 to 4k monitors
