@@ -17,13 +17,13 @@ a few concepts in it with every project. The main ideas/technologies covered in 
 
 # Some Things I Did on This Project
 
-* Used Aria and NVDA screen reader to maximize accessibility for non-sighted individuals
 * Used native, semantic HTML tags whenever possible to increase screen reader compatibility
-* Used JS and Jquery to dynamically add classes, control scroll behavior, and include navigable, automatically updating instagram gallery
+* Used Aria and NVDA screen reader to compensate for the use of non-semantic HTML in special cases
+* Used JS and Jquery to dynamically add classes, control scroll behavior, and include a navigable, automatically updating instagram gallery
 * Used media queries to create an easy to use layout on screen sizes ranging from the iPhone 4 to 4k monitors
-* Made use of plugins to add flair to the user experience
+* Made use of plugins such as Owl Carousel to add flair to the user experience
 
 # Things Left to Do
 
 * Add touch events to instafeed gallery for ease of use on mobile 
-* Make better use of relative units for best visual experience on every device
+* Make better use of relative units and CSS calculation features for the best possible layout on every device
