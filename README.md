@@ -1,4 +1,4 @@
-# Jewels-Jewels
+# Ruby's Vintage
 
 Please go to https://francoisboulou.github.io/Jewels-Jewels/ for the live version.
 A simple static landing page for an online jewelry store. A version of this site was built by me for Ruby's Vintage, a small business in Salt Lake City, UT.
