@@ -1,0 +1,28 @@
+.collection-img {
+  object-fit: cover;
+}
+
+.banner {
+  background-image: url(../images/banner-sm.jpg);
+}
+@media (min-width: 768px) {
+  .banner {
+    background-image: url(../images/banner-med.jpg);
+  }
+}
+@media (min-width: 992px) {
+  .banner {
+    background-image: url(../images/banner.jpg);
+  }
+}
+
+.mobile-menu {
+  display: block;
+}
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

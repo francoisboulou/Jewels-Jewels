@@ -1,0 +1,11 @@
+@import "../../bootstrap/scss/_functions";
+@import "../../bootstrap/scss/_variables";
+@import "../../bootstrap/scss/mixins/_breakpoints";
+
+.mobile-menu {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}

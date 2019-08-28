@@ -1,0 +1,15 @@
+@import "../../bootstrap/scss/_functions";
+@import "../../bootstrap/scss/_variables";
+@import "../../bootstrap/scss/mixins/_breakpoints";
+
+.banner {
+  background-image: url(../images/banner-sm.jpg);
+
+  @include media-breakpoint-up(md) {
+    background-image: url(../images/banner-med.jpg);
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-image: url(../images/banner.jpg);
+  }
+}
