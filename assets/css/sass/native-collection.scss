@@ -1,0 +1,17 @@
+.nat-col {
+  font-family: "Beyond", sans-serif;
+  font-size: 10vw;
+  background-image: url("../images/extra_2_vert_.jpg");
+  background-size: cover;
+  height: 90%;
+  width: 95%;
+
+  @media only screen and (orientation: landscape) {
+    background-image: url("../images/extra_2_hor.jpg");
+    background-position: center;
+  }
+
+  a {
+    font-size: 5vw;
+  }
+}

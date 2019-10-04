@@ -1,0 +1,7 @@
+header {
+  height: 75px;
+
+  @include media-breakpoint-up(md) {
+    height: 150px;
+  }
+}

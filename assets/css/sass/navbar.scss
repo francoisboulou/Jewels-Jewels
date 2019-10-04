@@ -1,0 +1,29 @@
+@import "../../bootstrap/scss/_functions";
+@import "../../bootstrap/scss/_variables";
+@import "../../bootstrap/scss/mixins/_breakpoints";
+
+.navbar-nav {
+  font-size: 2rem;
+  height: calc(100vh - 70px);
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.5rem;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    width: 50%;
+  }
+}
+
+#header {
+  transition: 0.5s;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#burger:focus {
+  outline: none !important;
+}

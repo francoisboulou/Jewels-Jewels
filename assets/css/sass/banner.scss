@@ -1,0 +1,31 @@
+@import "../../bootstrap/scss/_functions";
+@import "../../bootstrap/scss/_variables";
+@import "../../bootstrap/scss/mixins/_breakpoints";
+
+.banner {
+  background-image: url(../images/banner-med.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+
+  .banner-heading {
+    font-size: 10vw;
+    font-family: "Lucida-Demi";
+
+    @include media-breakpoint-up(md) {
+      font-size: 7vw;
+    }
+  }
+
+  .banner-button {
+    font-size: 6.5vw;
+
+    @include media-breakpoint-up(md) {
+      font-size: 3.5vw;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    background-image: url(../images/banner.jpg);
+  }
+}

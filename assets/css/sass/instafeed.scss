@@ -1,0 +1,19 @@
+.instafeed-container {
+  width: 100vw;
+  overflow: hidden;
+
+  #instafeed {
+    width: 700vw;
+
+    .instaimg {
+      transition: left 1s;
+      width: 100vw !important;
+      padding: 0 5vw;
+
+      .img-fluid {
+        width: 90vw;
+        max-width: initial;
+      }
+    }
+  }
+}

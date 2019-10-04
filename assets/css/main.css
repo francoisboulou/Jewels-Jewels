@@ -1,0 +1,123 @@
+.collection-img {
+  object-fit: cover;
+}
+
+.banner {
+  background-image: url(../images/banner-med.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.banner .banner-heading {
+  font-size: 10vw;
+  font-family: "Lucida-Demi";
+}
+@media (min-width: 768px) {
+  .banner .banner-heading {
+    font-size: 7vw;
+  }
+}
+.banner .banner-button {
+  font-size: 6.5vw;
+}
+@media (min-width: 768px) {
+  .banner .banner-button {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 768px) {
+  .banner {
+    background-image: url(../images/banner.jpg);
+  }
+}
+
+.navbar-nav {
+  font-size: 2rem;
+  height: calc(100vh - 70px);
+}
+@media (min-width: 992px) {
+  .navbar-nav {
+    font-size: 1.5rem;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    width: 50%;
+  }
+}
+
+#header {
+  transition: 0.5s;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#burger:focus {
+  outline: none !important;
+}
+
+header {
+  height: 75px;
+}
+@media (min-width: 768px) {
+  header {
+    height: 150px;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.nat-col {
+  font-family: "Beyond", sans-serif;
+  font-size: 10vw;
+  background-image: url("../images/extra_2_vert_.jpg");
+  background-size: cover;
+  height: 90%;
+  width: 95%;
+}
+@media only screen and (orientation: landscape) {
+  .nat-col {
+    background-image: url("../images/extra_2_hor.jpg");
+    background-position: center;
+  }
+}
+.nat-col a {
+  font-size: 5vw;
+}
+
+.instafeed-container {
+  width: 100vw;
+  overflow: hidden;
+}
+.instafeed-container #instafeed {
+  width: 700vw;
+}
+.instafeed-container #instafeed .instaimg {
+  transition: left 1s;
+  width: 100vw !important;
+  padding: 0 5vw;
+}
+.instafeed-container #instafeed .instaimg .img-fluid {
+  width: 90vw;
+  max-width: initial;
+}
+
+a {
+  color: black !important;
+}
+
+@font-face {
+  font-family: "Beyond";
+  src: url("../fonts/beyond_the_mountains.otf") format("opentype"), url("../fonts/beyond_the_mountains.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lucida";
+  src: url("../fonts/lucida_bright_demi.ttf") format("truetype"), url("../fonts/lucida_bright_regular.ttf") format("truetype");
+}
+
+/*# sourceMappingURL=main.css.map */
