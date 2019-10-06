@@ -206,7 +206,6 @@ header {
   bottom: 5%;
   transform: translateX(-50%);
   display: flex;
-  border: 2px solid yellow;
 }
 
 .nav-dot {
