@@ -3,13 +3,6 @@ $(document).ready(function()
 	"use strict";
 
 
-	
-
-	// // Disappearing header vars
-
-	// let header = document.getElementById('header');
-	// let menuActive = false;
-	// let menu = document.getElementById('menu');
 	const burger = document.getElementById('burger');
 	const header = document.getElementById('header');
 	let burger_clicked = false 
@@ -40,8 +33,8 @@ $(document).ready(function()
 	
 	let leftPos = 0;
 	let instaImgs = document.getElementsByClassName('instaimg');
-	const gallLeft = document.getElementById("gall_left");
-	const gallRight = document.getElementById("gall_right");
+	const galleryLeft = document.getElementById("gallery-left");
+	const galleryRight = document.getElementById("gallery-right");
 	
 
 	// Instafeed div
@@ -57,12 +50,25 @@ $(document).ready(function()
 	});
 
 	// Adding Aria label to instaimgs
+	// Remove col-lg-3 class from instaimgs
 
 	window.onload = function() {
 		for (let i = 0; i < instaImgs.length; i++) {
-			let img = instaImgs[i].querySelector("a");
-			img.setAttribute('aria-label', 'instagram image');
+			console.log("removed col");
+			let imgCont = instaImgs[i];
+			imgCont.classList.remove("col-lg-3");
+		}
+
+		for (let i = 0; i < instaImgs.length; i++) {
+			let imglink = instaImgs[i].querySelector("a");
+			imglink.setAttribute('aria-label', 'instagram image');
 			console.log("set attribute" + i);
+		}
+
+		for (let i = 0; i < instaImgs.length; i++) {
+			console.log("removed col");
+			let img = instaImgs[i].querySelector("a").querySelector("img");
+			img.classList.remove("img-fluid");
 		}
 	};
 	
@@ -70,7 +76,7 @@ $(document).ready(function()
 	// Instafeed arrow behavior
 	
 	function instaScroll() {
-		if (event.target === gallRight) {
+		if (event.target === galleryRight) {
 			if (leftPos <= -(instaImgs.length * 100)) {
 				console.log('no more scrolling');
 				return
@@ -94,107 +100,54 @@ $(document).ready(function()
 		}	
 	}	
 	
-	gallLeft.addEventListener('click', instaScroll);
-	gallRight.addEventListener('click', instaScroll);
+	galleryLeft.addEventListener('click', instaScroll);
+	galleryRight.addEventListener('click', instaScroll);
 		
 	
 	// // Disappearing Header
+	let prevScrollpos = window.pageYOffset;
 
-	// var prevScrollpos = window.pageYOffset;
+	function setHeader() {
+		console.log("in setheader")
+		let currentScrollPos = window.pageYOffset;
+  		if (prevScrollpos < currentScrollPos) {
+    		header.classList.add("scrolled");
+  		} else {
+    		header.classList.remove("scrolled");;
+  		}
+  		prevScrollpos = currentScrollPos;
+	}
 
-	// function setHeader() {
-	// 	var currentScrollPos = window.pageYOffset;
-  	// 	if (prevScrollpos < currentScrollPos) {
-    // 		header.classList.add("scrolled");
-  	// 	} else {
-    // 		header.classList.remove("scrolled");;
-  	// 	}
-  	// 	prevScrollpos = currentScrollPos;
-	// }
+	window.onresize = function()
+	{
+		setHeader();
+	}
 
-	// setHeader();
-
-	// window.onresize = function()
-	// {
-	// 	setHeader();
-	// }
-
-	// window.onscroll = function()
-	// {
-	// 	setHeader();
-	// }
+	window.onscroll = function()
+	{
+		setHeader();
+	}
 
 
-	// // Mobile Menu
+	// Add hover effect to featured product images when not mobile.
 
-	// function openMenu()
-	// {
-	// 	menu.classList.add("active");
-	// 	menuActive = true;
-	// }
+	function isMobile() {
+		try{ document.createEvent("TouchEvent"); return true; }
+		catch(e){ return false; }
+		}
 
-	// function closeMenu()
-	// {
-	// 	menu.classList.remove("active");
-	// 	menuActive = false;
-	// }
-
-	// function initMenu()
-	// {
-	// 	if(menu)
-	// 	{
-	// 		if(burger_button)
-	// 		{
-	// 			burger.onclick = function()
-	// 			{
-	// 				if(menuActive)
-	// 				{
-	// 					closeMenu();
-	// 				}
-	// 				else
-	// 				{
-	// 					openMenu();
-
-	// 					$(document).one('click', function cls(e)
-	// 					{
-	// 						if($(e.target).hasClass('menu_mm'))
-	// 						{
-	// 							$(document).one('click', cls);
-	// 						}
-	// 						else
-	// 						{
-	// 							closeMenu();
-	// 						}
-	// 					})
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
-
-
-
-	// // Add hover effect to featured product images when not mobile.
-
-	// function isMobile() {
-	// 	try{ document.createEvent("TouchEvent"); return true; }
-	// 	catch(e){ return false; }
-	// 	}
-
-	// function onHoverAdd() {
-	// 	if (isMobile() === false) {
-	// 		$(".product_image").hover(function(){
-	// 			$(this).css("transform", "scale(1.1)");
-	// 			}, function() {
-	// 			$(this).css("transform", "scale(1)");
-	// 			});
-	// 	}
-	// }
+	function onHoverAdd() {
+		if (!isMobile()) {
+			$(".product-image").hover(function(){
+				$(this).css("transform", "scale(1.1)");
+				}, function() {
+				$(this).css("transform", "scale(1)");
+				});
+		}
+	}
 
 	userFeed.run();
 	solidifyHeader();
 	headerResize();
-	// onHoverAdd();
-	// addAria();
-	// initMenu();
+	onHoverAdd();
 });

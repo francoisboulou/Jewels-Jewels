@@ -1,4 +1,4 @@
-@import "../bootstrap/bootstrap-4.0.0/scss/bootstrap.scss";
+@import "../bootstrap/bootstrap-4.0.0/scss/bootstrap-reboot";
 @import "sass/utilities/reset";
 @import "sass/utilities/fonts";
 @import "sass/header";
@@ -6,6 +6,8 @@
 @import "sass/navbar";
 @import "sass/banner";
 @import "sass/collections";
+@import "sass/new-arrivals";
 @import "sass/native-collection";
 @import "sass/testimonials";
 @import "sass/instafeed";
+@import "sass/footer";

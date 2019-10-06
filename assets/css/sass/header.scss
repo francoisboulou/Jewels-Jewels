@@ -1,7 +1,12 @@
 header {
   height: 75px;
+  top: 0;
 
   @include media-breakpoint-up(md) {
     height: 150px;
   }
+}
+
+.scrolled {
+  top: -200px;
 }

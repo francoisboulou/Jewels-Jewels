@@ -35,7 +35,7 @@
 
       <div class="collapse navbar-collapse" id="navbar">
         <div
-          class="navbar-nav text-center d-flex align-items-center justify-content-center mt-2 mt-lg-0"
+          class="navbar-nav text-center align-items-center justify-content-between mt-2 mt-lg-0"
         >
           <a class="nav-item nav-link" href="#"
             >Home <span class="sr-only">(current)</span></a
@@ -110,11 +110,15 @@
         </section>
 
         <!-- New Arrivals -->
-        <section aria-label="new arrivals" class="container-fluid">
+        <section
+          aria-label="new arrivals"
+          class="new-arrivals my-5 container-fluid"
+        >
+          <h1 class="text-center">New Arrivals</h1>
           <div class="row">
             <a class="col-sm-4 text-center" href="#">
               <img
-                class="img-fluid"
+                class="img-fluid product-image"
                 src="assets/images/product_3.jpg"
                 alt="Art Deco Sunstone Ring"
               />
@@ -125,7 +129,7 @@
             </a>
             <a class="col-sm-4 text-center" href="#">
               <img
-                class="img-fluid"
+                class="img-fluid product-image"
                 src="assets/images/product_1.jpg"
                 alt="Victorian White Gold Diamond Ring"
               />
@@ -136,7 +140,7 @@
             </a>
             <a class="col-sm-4 text-center" href="#">
               <img
-                class="img-fluid"
+                class="img-fluid product-image"
                 src="assets/images/product_2.jpg"
                 alt=" White Gold Star Saphire Ring"
               />
@@ -160,60 +164,59 @@
 
         <!-- Testimonials -->
         <section
-          id="testimonials"
           aria-label="testimonials-slider"
-          class="carousel slide text-center"
+          class="carousel slide my-5 py-5 text-center"
           data-ride="carousel"
         >
           <div class="carousel-inner">
             <div class="carousel-item active" aria-label="testimonial one">
-              <p>
+              <p class="test-text">
                 “Outstanding customer service. When I inquired about this ring,
                 they answered all my questions and went above and beyond to make
                 sure I was happy with my decision. I ordered on a Friday and it
                 was in my mailbox Monday. I highly recommend this seller.”
               </p>
-              <p>Dominique H.</p>
+              <p class="test-name">Dominique H.</p>
             </div>
 
             <div class="carousel-item" aria-label="testimonial two">
-              <p>
+              <p class="test-text">
                 “A wonderful buying experience. My rare, unique item arrived
                 ahead of schedule, packaged with care, and looked exactly as
                 described. Communication with them was amazing, they were always
                 available when I had a question. I'll definitely buy from Ruby's
                 Vintage again.”
               </p>
-              <p>Scott W.</p>
+              <p class="test-name">Scott W.</p>
             </div>
 
             <div class="carousel-item" aria-label="testimonial three">
-              <p>
+              <p class="test-text">
                 “I have purchased many pieces from Ruby's Vintage over the years
                 and each is a truly unique treasure. I am not easily impressed,
                 but the fast shipping, and excellent communication of Ruby's
                 Vintage have made me a regular customer. I highly recommend
                 them”
               </p>
-              <p>Sandra G.</p>
+              <p class="test-name">Sandra G.</p>
             </div>
           </div>
         </section>
         <section class="instafeed-container">
           <div
             id="instafeed"
-            aria-label="instagram feed"
             class="d-inline-flex"
+            aria-label="instagram feed"
           ></div>
           <div class="">
             <i
               aria-label="left arrow"
-              id="gall_left"
+              id="gallery-left"
               class="fa fa-arrow-left"
             ></i>
             <i
               aria-label="right arrow"
-              id="gall_right"
+              id="gallery-right"
               class="fa fa-arrow-right"
             ></i>
           </div>
@@ -240,15 +243,18 @@
         </form>
       </section>
 
-      <section aria-label="footer navigation">
-        <a class="" href="#"
+      <section
+        aria-label="footer navigation"
+        class="d-flex justify-content-center"
+      >
+        <a class="w-25" href="#"
           ><img
             src="assets/images/logo.png"
-            class="img-fluid w-25"
+            class="img-fluid w-75"
             alt="jewelry logo"
         /></a>
-        <ul class="list-unstyled">
-          <li>
+        <ul class="list-unstyled d-flex">
+          <li class="mr-4">
             <a href="#" aria-label="facebook link"
               ><i class="fab fa-facebook-f" aria-hidden="true"></i
             ></a>
