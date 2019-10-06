@@ -33,8 +33,6 @@ $(document).ready(function()
 	
 	let leftPos = 0;
 	let instaImgs = document.getElementsByClassName('instaimg');
-	const galleryLeft = document.getElementById("gallery-left");
-	const galleryRight = document.getElementById("gallery-right");
 	
 
 	// Instafeed div
@@ -51,10 +49,10 @@ $(document).ready(function()
 
 	// Adding Aria label to instaimgs
 	// Remove col-lg-3 class from instaimgs
+	// remove img-fluid class
 
 	window.onload = function() {
 		for (let i = 0; i < instaImgs.length; i++) {
-			console.log("removed col");
 			let imgCont = instaImgs[i];
 			imgCont.classList.remove("col-lg-3");
 		}
@@ -62,53 +60,55 @@ $(document).ready(function()
 		for (let i = 0; i < instaImgs.length; i++) {
 			let imglink = instaImgs[i].querySelector("a");
 			imglink.setAttribute('aria-label', 'instagram image');
-			console.log("set attribute" + i);
 		}
 
 		for (let i = 0; i < instaImgs.length; i++) {
-			console.log("removed col");
 			let img = instaImgs[i].querySelector("a").querySelector("img");
 			img.classList.remove("img-fluid");
 		}
+
+		createDots()
+		dotListeners()
 	};
 	
 
 	// Instafeed arrow behavior
-	
-	function instaScroll() {
-		if (event.target === galleryRight) {
-			if (leftPos <= -(instaImgs.length * 100)) {
-				console.log('no more scrolling');
-				return
-			} else {
-				leftPos -= 100;
-				for(let i = 0; i < instaImgs.length; i++) {
-					instaImgs[i].style.left = leftPos + 'vw';
-				}
-			}
-		} else {
-			if (leftPos >= 0) {
-				console.log('no more scrolling');
-				return
-			} else {
-				leftPos += 100;
-				for(let i = 0; i < instaImgs.length; i++) {
-					instaImgs[i].style.left = leftPos + 'vw';
-				}
-			}
+
+	function createDots() {
+		const dotCont = document.getElementById("nav-dots")
+
+		for (let i = 0; i < instaImgs.length; i++) {
 			
-		}	
+			let dot = document.createElement("div")
+			dot.setAttribute("class", "nav-dot")
+			dot.setAttribute ("id", String(i))
+			dotCont.appendChild(dot)
+		}
+	}
+	
+	function dotListeners() {
+		let dots =  document.getElementsByClassName("nav-dot")
+		
+		for (let i = 0; i < dots.length; i++) {
+			dots[i].addEventListener('click', dotClick)
+			console.log("added listener");
+		}
+	}
+	
+	function dotClick() {
+		const dotId = event.target.id
+		for(let i = 0; i < instaImgs.length; i++) {
+			instaImgs[i].style.left = "-" + dotId + '00vw';
+			}
+	
 	}	
 	
-	galleryLeft.addEventListener('click', instaScroll);
-	galleryRight.addEventListener('click', instaScroll);
 		
 	
 	// // Disappearing Header
 	let prevScrollpos = window.pageYOffset;
 
 	function setHeader() {
-		console.log("in setheader")
 		let currentScrollPos = window.pageYOffset;
   		if (prevScrollpos < currentScrollPos) {
     		header.classList.add("scrolled");
