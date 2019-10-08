@@ -1,0 +1,25 @@
+.modal-dialog {
+  padding: 0 !important;
+}
+
+.modal-header {
+  flex-direction: column;
+
+  .modal-title {
+    align-self: center;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.newsletter {
+  font-family: "Lucida", serif;
+}
+
+.newsletter-btn {
+  font-family: "Lucida", serif;
+  background-color: white;
+  border: 1px solid black;
+}
