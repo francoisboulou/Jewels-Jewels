@@ -35,7 +35,7 @@
 
       <div class="collapse navbar-collapse" id="navbar">
         <div
-          class="navbar-nav text-center align-items-center justify-content-between mt-2 mt-lg-0"
+          class="navbar-nav text-center align-items-center justify-content-center mt-2 mt-lg-0"
         >
           <a class="nav-item nav-link" href="#"
             >Home <span class="sr-only">(current)</span></a
@@ -165,7 +165,7 @@
         <!-- Testimonials -->
         <section
           aria-label="testimonials-slider"
-          class="carousel slide my-5 py-5 text-center"
+          class="carousel slide my-5 py-5 px-5 text-center"
           data-ride="carousel"
         >
           <div class="carousel-inner">
@@ -215,34 +215,58 @@
 
     <!-- Footer -->
 
-    <footer class="text-center">
-      <section aria-label="newsletter">
-        <h1>subscribe for a 20% discount</h1>
-        <form action="#">
-          <input
-            aria-label="email input"
-            id=""
-            type="email"
-            class=""
-            required="required"
-            placeholder="E-mail here"
-          />
+    <footer class="text-center ">
+      <div
+        class="modal fade"
+        id="newsletterModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="newsletterModal"
+        aria-hidden="true"
+      >
+        <div
+          class="newsletter modal-dialog modal-dialog-centered"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h3 class="modal-title" id="newsletterModal">
+                Subscribe for a 20% discount!
+              </h3>
+            </div>
+            <div class="modal-body">
+              <form class="form">
+                <div class="form-group">
+                  <label for="InputEmail">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="InputEmail"
+                    aria-label="email field"
+                    placeholder="Enter email"
+                  />
+                </div>
 
-          <button type="submit" class="">subscribe</button>
-        </form>
-      </section>
+                <button type="submit" class="newsletter-btn">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section
         aria-label="footer navigation"
-        class="d-flex justify-content-center"
+        class="d-flex justify-content-center align-items-center"
       >
-        <a class="w-25" href="#"
-          ><img
-            src="assets/images/logo.png"
-            class="img-fluid w-75"
-            alt="jewelry logo"
-        /></a>
-        <ul class="list-unstyled d-flex">
+        <ul class="list-unstyled d-flex my-5">
           <li class="mr-4">
             <a href="#" aria-label="facebook link"
               ><i class="fab fa-facebook-f" aria-hidden="true"></i

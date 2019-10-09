@@ -24,3 +24,10 @@
 #burger:focus {
   outline: none !important;
 }
+
+.nav-link,
+.nav-item {
+  @media only screen and (orientation: landscape) {
+    padding: 0 !important;
+  }
+}

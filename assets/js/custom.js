@@ -69,6 +69,7 @@ $(document).ready(function()
 
 		createDots()
 		dotListeners()
+		$('#newsletterModal').modal('show');
 	};
 	
 
@@ -91,7 +92,6 @@ $(document).ready(function()
 		
 		for (let i = 0; i < dots.length; i++) {
 			dots[i].addEventListener('click', dotClick)
-			console.log("added listener");
 		}
 	}
 	

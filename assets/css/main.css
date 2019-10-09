@@ -73,6 +73,13 @@ header {
   outline: none !important;
 }
 
+@media only screen and (orientation: landscape) {
+  .nav-link,
+.nav-item {
+    padding: 0 !important;
+  }
+}
+
 .banner {
   background-image: url(../images/banner-med.jpg);
   background-size: cover;
