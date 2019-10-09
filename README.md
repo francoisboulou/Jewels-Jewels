@@ -9,11 +9,11 @@ a few concepts in it with every project. The main ideas/technologies covered in 
 * Semantic HTML/Basic SEO
 * Accessibility (Aria/NVDA Screen Reader/Lighthouse Accessibility Audit)
 * Mobile first design/Media Queries
-* Layouts (Flexbox)
+* Flexbox
 * Animations
-* CSS Preprocessing (LESS)
-* DOM manipulation (JS/JQuery)
-* Plugins/Libraries (Instafeed, Owl Carousel) 
+* Bootstrap
+* SASS
+* JS/JQuery 
 
 # Some Things I Did on This Project
 
@@ -21,7 +21,6 @@ a few concepts in it with every project. The main ideas/technologies covered in 
 * Used NVDA screen reader to test the navigability of my site for non-sighted users
 * Used JS and Jquery to dynamically add classes, control scroll behavior, and include a navigable, automatically updating instagram gallery
 * Used media queries to create an easy to use layout on screen sizes ranging from the iPhone 4 to 4k monitors
-* Made use of plugins such as Owl Carousel to add flair to the user experience
 
 # Things Left to Do
 
